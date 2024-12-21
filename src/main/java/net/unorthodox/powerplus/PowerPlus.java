@@ -36,7 +36,7 @@ public class PowerPlus {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
-        ModItems.ITEMS.register(modEventBus);
+        ModItems.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
@@ -66,18 +66,7 @@ public class PowerPlus {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.SCANDIUM);
-            event.accept(ModItems.SAMARIUM);
-            event.accept(ModItems.EUROPIUM);
-            event.accept(ModItems.CERIUM);
-            event.accept(ModItems.TERBIUM);
-            event.accept(ModItems.RAW_SCANDIUM);
-            event.accept(ModItems.RAW_SAMARIUM);
-            event.accept(ModItems.RAW_EUROPIUM);
-            event.accept(ModItems.RAW_CERIUM);
-            event.accept(ModItems.RAW_TERBIUM);
-            event.accept(ModItems.FORGED_SCRAP_DUST);
-            event.accept(ModItems.FORGED_SCRAP_INGOT);
-            event.accept(ModItems.FORGED_SCRAP);
+
 
         }
     }
