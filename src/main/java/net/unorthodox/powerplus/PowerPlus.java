@@ -1,5 +1,6 @@
 package net.unorthodox.powerplus;
 
+import net.minecraft.world.item.CreativeModeTabs;
 import net.unorthodox.powerplus.item.ModItems;
 import org.slf4j.Logger;
 
@@ -22,10 +23,10 @@ import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
-@Mod(PowerPlus.PPLUS)
+@Mod(PowerPlus.MOD_ID)
 public class PowerPlus {
     // Define mod id in a common place for everything to reference
-    public static final String PPLUS = "powerplus";
+    public static final String MOD_ID = "powerplus";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
@@ -63,7 +64,22 @@ public class PowerPlus {
 
     // Add the example block non to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.SCANDIUM);
+            event.accept(ModItems.SAMARIUM);
+            event.accept(ModItems.EUROPIUM);
+            event.accept(ModItems.CERIUM);
+            event.accept(ModItems.TERBIUM);
+            event.accept(ModItems.RAW_SCANDIUM);
+            event.accept(ModItems.RAW_SAMARIUM);
+            event.accept(ModItems.RAW_EUROPIUM);
+            event.accept(ModItems.RAW_CERIUM);
+            event.accept(ModItems.RAW_TERBIUM);
+            event.accept(ModItems.FORGED_SCRAP_DUST);
+            event.accept(ModItems.FORGED_SCRAP_INGOT);
+            event.accept(ModItems.FORGED_SCRAP);
 
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
@@ -74,7 +90,7 @@ public class PowerPlus {
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @EventBusSubscriber(modid = PPLUS, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
