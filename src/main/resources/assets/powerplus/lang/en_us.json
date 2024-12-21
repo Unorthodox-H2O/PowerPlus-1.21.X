@@ -1,16 +1,3 @@
 {
-  "item.powerplus.scandium": "Scandium",
-  "item.powerplus.samarium": "Samarium",
-  "item.powerplus.europium": "Europium",
-  "item.powerplus.cerium": "Cerium",
-  "item.powerplus.terbium": "Terbium",
-  "item.powerplus.raw_scandium": "Raw Scandium",
-  "item.powerplus.raw_samarium": "Raw Samarium",
-  "item.powerplus.raw_europium": "Raw Europium",
-  "item.powerplus.raw_cerium": "Raw Cerium",
-  "item.powerplus.raw_terbium": "Raw Terbium",
-  "item.powerplus.forged_scrap_ingot": "Forged Scrap Ingot",
-  "item.powerplus.forged_scrap_dust": "Forged Scrap Dust",
-  "item.powerplus.forged_scrap": "Forged Scrap"
-
+  "item.powerplus.scandium": "Scandium"
 }
