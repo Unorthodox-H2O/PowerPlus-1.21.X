@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "powerplus:item/scandium"
+    "layer0": "powerplus:item/raw_europium"
   }
 }
