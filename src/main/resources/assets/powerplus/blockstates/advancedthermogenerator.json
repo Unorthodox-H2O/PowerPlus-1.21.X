@@ -1,0 +1,24 @@
+{
+  "variants": {
+          "facing=east": {
+  "model": "powerplus:block/advancedthermogenerator",
+            "y": 270
+      },
+
+      "facing=north": {
+  "model": "powerplus:block/advancedthermogenerator",
+            "y": 180
+      },
+
+      "facing=south": {
+  "model": "powerplus:block/advancedthermogenerator"
+
+      },
+
+      "facing=west": {
+  "model": "powerplus:block/advancedthermogenerator",
+            "y": 90
+
+      }
+  }
+}

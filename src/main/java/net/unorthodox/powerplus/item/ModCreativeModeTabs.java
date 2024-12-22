@@ -5,6 +5,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.unorthodox.powerplus.PowerPlus;
@@ -15,7 +16,7 @@ public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, PowerPlus.MOD_ID);
 
-    public static final Supplier<CreativeModeTab> POWER_PLUS_ITEMS_TAB = CREATIVE_MODE_TAB.register("scandium_items_tab", () -> CreativeModeTab.builder()
+    public static final Supplier<CreativeModeTab> POWERPLUS_ITEMS_TAB = CREATIVE_MODE_TAB.register("powerplus_items_tab", () -> CreativeModeTab.builder()
             .icon(() -> new ItemStack(ModItems.SCANDIUM.get()))
             .title(Component.translatable("itemGroup.powerplus.powerplus_items"))
             .displayItems((pParameters, pOutput) -> {
@@ -44,7 +45,18 @@ public class ModCreativeModeTabs {
                 //pOutput.accept(ModItems.WRENCH);
 
             }).build());
+    public static final Supplier<CreativeModeTab> POWERPLUS_BLOCK_TAB = CREATIVE_MODE_TAB.register("powerplus_block_tab", () -> CreativeModeTab.builder()
+            .icon(() -> new ItemStack(ModItems.SCANDIUM.get()))
+            .withTabsBefore(ResourceLocation.fromNamespaceAndPath(PowerPlus.MOD_ID, "powerplus_items_tab"))
+            .title(Component.translatable("itemGroup.powerplus.powerplus_blocks"))
+            .displayItems((pParameters, pOutput) -> {
 
+                // add Blocks to Creative mode tab
+                //Blocks
+                pOutput.accept(Blocks.BEACON);
+
+
+            }).build());
 
     public static void register(IEventBus eventBus){
         CREATIVE_MODE_TAB.register(eventBus);

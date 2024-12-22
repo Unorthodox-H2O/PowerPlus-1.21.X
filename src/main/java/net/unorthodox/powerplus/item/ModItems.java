@@ -6,6 +6,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.unorthodox.powerplus.PowerPlus;
+import net.unorthodox.powerplus.item.upgrades.benk.*;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(PowerPlus.MOD_ID);
@@ -26,7 +27,11 @@ public class ModItems {
     //Benk Upgrades
     public static final DeferredItem<Item> UPGRADEBLANK;
     public static final DeferredItem<Item> ADVANCEDUPGRADEBLANK;
-
+    public static final DeferredItem<Item> UPGRADETIER1;
+    public static final DeferredItem<Item> UPGRADETIER2;
+    public static final DeferredItem<Item> UPGRADETIER3;
+    public static final DeferredItem<Item> UPGRADETIER4;
+    public static final DeferredItem<Item> UPGRADETIER5;
 
     public ModItems(){
     }
@@ -46,6 +51,11 @@ public class ModItems {
         FORGED_SCRAP = ITEMS.registerSimpleItem("forged_scrap");
         UPGRADEBLANK = ITEMS.registerSimpleItem("upgradeblank");
         ADVANCEDUPGRADEBLANK = ITEMS.registerSimpleItem("advancedupgradeblank");
+        UPGRADETIER1 = ITEMS.register("upgradetier1",() -> new UpgradeTier1Item(new Item.Properties()));
+        UPGRADETIER2 = ITEMS.register("upgradetier2",() -> new UpgradeTier2Item(new Item.Properties()));
+        UPGRADETIER3 = ITEMS.register("upgradetier3",() -> new UpgradeTier3Item(new Item.Properties()));
+        UPGRADETIER4 = ITEMS.register("upgradetier4",() -> new UpgradeTier4Item(new Item.Properties()));
+        UPGRADETIER5 = ITEMS.register("upgradetier5",() -> new UpgradeTier5Item(new Item.Properties()));
     }
 
     public static void register(IEventBus eventBus) {

@@ -1,0 +1,24 @@
+{
+  "variants": {
+          "facing=east": {
+  "model": "powerplus:block/legendarythermogenerator",
+            "y": 270
+      },
+
+      "facing=north": {
+  "model": "powerplus:block/legendarythermogenerator",
+            "y": 180
+      },
+
+      "facing=south": {
+  "model": "powerplus:block/legendarythermogenerator"
+
+      },
+
+      "facing=west": {
+  "model": "powerplus:block/legendarythermogenerator",
+            "y": 90
+
+      }
+  }
+}
