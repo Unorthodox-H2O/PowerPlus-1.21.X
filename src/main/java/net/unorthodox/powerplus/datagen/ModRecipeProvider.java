@@ -45,31 +45,36 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("SSS")
                 .pattern("SSS")
                 .define('S', ModItems.SCANDIUM.get())
-                .unlockedBy("has_sanctium", has(ModItems.SCANDIUM.get())).save(pRecipeOutput);
+                .unlockedBy("has_scandium", has(ModItems.SCANDIUM.get())).save(pRecipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SAMARIUM_BLOCK.get())
                 .pattern("SSS")
                 .pattern("SSS")
                 .pattern("SSS")
                 .define('S', ModItems.SAMARIUM.get())
                 .unlockedBy("has_samarium", has(ModItems.SAMARIUM.get())).save(pRecipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.EUROPIUM_BLOCK.get())
                 .pattern("EEE")
                 .pattern("EEE")
                 .pattern("EEE")
                 .define('E', ModItems.EUROPIUM.get())
                 .unlockedBy("has_europium", has(ModItems.EUROPIUM.get())).save(pRecipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CERIUM_BLOCK.get())
                 .pattern("CCC")
                 .pattern("CCC")
                 .pattern("CCC")
                 .define('C', ModItems.CERIUM.get())
                 .unlockedBy("has_cerium", has(ModItems.CERIUM.get())).save(pRecipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.TERBIUM_BLOCK.get())
                 .pattern("TTT")
                 .pattern("TTT")
                 .pattern("TTT")
                 .define('T', ModItems.TERBIUM.get())
                 .unlockedBy("has_terbium", has(ModItems.TERBIUM.get())).save(pRecipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.UPGRADEBLANK.get())
                 .pattern("III")
                 .pattern("ICI")
@@ -77,62 +82,67 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('I', Items.IRON_INGOT)
                 .define('C', Items.COPPER_BLOCK)
                 .unlockedBy("has_upgradeblank", has(ModItems.UPGRADEBLANK.get())).save(pRecipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ADVANCEDUPGRADEBLANK.get())
                 .pattern("SDS")
                 .pattern("DBD")
                 .pattern("SDS")
                 .define('D', Items.DIAMOND)
-                .define('S', ModItems.FORGED_SCRAP_INGOT)
-                .define('B', ModItems.UPGRADEBLANK)
+                .define('S', ModItems.FORGED_SCRAP_INGOT.get())
+                .define('B', ModItems.UPGRADEBLANK.get())
                 .unlockedBy("has_advancedupgradeblank", has(ModItems.ADVANCEDUPGRADEBLANK.get())).save(pRecipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.FORGED_SCRAP_INGOT.get())
                 .pattern("GIG")
                 .pattern("ICI")
                 .pattern("GIG")
-                .define('I', ModItems.FORGED_SCRAP)
+                .define('I', ModItems.FORGED_SCRAP.get())
                 .define('G', Items.GOLD_INGOT)
                 .define('C', Items.LAVA_BUCKET)
                 .unlockedBy("has_advancedblank", has(ModItems.FORGED_SCRAP_INGOT.get())).save(pRecipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.UPGRADETIER1.get())
                 .pattern("CCC")
                 .pattern("CBC")
                 .pattern("CCC")
                 .define('C', Items.COPPER_INGOT)
-                .define('B', ModItems.UPGRADEBLANK)
+                .define('B', ModItems.UPGRADEBLANK.get())
                 .unlockedBy("has_upgradetier1", has(ModItems.UPGRADETIER1.get())).save(pRecipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.UPGRADETIER2.get())
                 .pattern("SSS")
                 .pattern("STS")
                 .pattern("SSS")
-                .define('S', ModItems.ADVANCEDUPGRADEBLANK)
-                .define('T', ModBlocks.SCANDIUM_BLOCK)
+                .define('S', ModItems.ADVANCEDUPGRADEBLANK.get())
+                .define('T', ModBlocks.SCANDIUM_BLOCK.get())
                 .unlockedBy("has_upgradetier2", has(ModItems.UPGRADETIER2.get())).save(pRecipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.UPGRADETIER3.get())
                 .pattern("ISI")
                 .pattern("STS")
                 .pattern("ISI")
-                .define('T', ModItems.ADVANCEDUPGRADEBLANK)
-                .define('S', ModBlocks.SAMARIUM_BLOCK)
+                .define('T', ModItems.ADVANCEDUPGRADEBLANK.get())
+                .define('S', ModBlocks.SAMARIUM_BLOCK.get())
                 .define('I', Items.IRON_BLOCK)
                 .unlockedBy("has_upgradetier3", has(ModItems.UPGRADETIER3.get())).save(pRecipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.UPGRADETIER4.get())
                 .pattern("GEG")
                 .pattern("ETE")
                 .pattern("GEG")
-                .define('T', ModItems.ADVANCEDUPGRADEBLANK)
-                .define('E', ModBlocks.EUROPIUM_BLOCK)
+                .define('T', ModItems.ADVANCEDUPGRADEBLANK.get())
+                .define('E', ModBlocks.EUROPIUM_BLOCK.get())
                 .define('G', Items.GOLD_BLOCK)
                 .unlockedBy("has_upgradetier4", has(ModItems.UPGRADETIER4.get())).save(pRecipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.UPGRADETIER5.get())
                 .pattern("DCD")
                 .pattern("CTC")
                 .pattern("DCD")
-                .define('T', ModItems.ADVANCEDUPGRADEBLANK)
-                .define('C', ModBlocks.CERIUM_BLOCK)
+                .define('T', ModItems.ADVANCEDUPGRADEBLANK.get())
+                .define('C', ModBlocks.CERIUM_BLOCK.get())
                 .define('D', Items.DIAMOND_BLOCK)
                 .unlockedBy("has_upgradetier5", has(ModItems.UPGRADETIER5.get())).save(pRecipeOutput);
-
-
 
         // Shapeless Recipes
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SCANDIUM.get(), 9)
