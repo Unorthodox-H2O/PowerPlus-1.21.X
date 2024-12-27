@@ -64,10 +64,10 @@ public class CeriumBenk extends Block {
     @Override
     public void appendHoverText(ItemStack pStack, Item.TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
         if(Screen.hasShiftDown()){
-                    pTooltipComponents.add(Component.translatable("tooltip.artifex.ceriumbenk.tooltip.1"));
-                    pTooltipComponents.add(Component.translatable("tooltip.artifex.ceriumbenk.tooltip.2"));
+                    pTooltipComponents.add(Component.translatable("tooltip.powerplus.ceriumbenk.tooltip.1"));
+                    pTooltipComponents.add(Component.translatable("tooltip.powerplus.ceriumbenk.tooltip.2"));
         } else {
-            pTooltipComponents.add(Component.translatable("tooltip.artifex.ceriumbenk.tooltip.shift"));
+            pTooltipComponents.add(Component.translatable("tooltip.powerplus.ceriumbenk.tooltip.shift"));
         }
 
         super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);

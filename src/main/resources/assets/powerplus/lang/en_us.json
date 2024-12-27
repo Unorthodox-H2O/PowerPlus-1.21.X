@@ -49,9 +49,30 @@
   "block.powerplus.elitethermogenerator": "Elite Thermo Generator",
   "block.powerplus.superiorthermogenerator": "Superior Thermo Generator",
   "block.powerplus.legendarythermogenerator": "Legendary Thermo Generator",
-  "block.powerplus.ascendantthermogenerator": "Ascendat Thermo Generator",
+  "block.powerplus.ascendantthermogenerator": "Ascendant Thermo Generator",
   "block.powerplus.radiantthermogenerator": "Radiant Thermo Generator",
   "block.powerplus.creativethermogenerator": "Creative Thermo Generator",
+
+  "block.powerplus.basicliquidgenerator": "Basic Liquid Generator",
+  "block.powerplus.advancedliquidgenerator": "Advanced Liquid Generator",
+  "block.powerplus.eliteliquidgenerator": "Elite Liquid Generator",
+  "block.powerplus.superiorliquidgenerator": "Superior Liquid Generator",
+  "block.powerplus.legendaryliquidgenerator": "Legendary Liquid Generator",
+  "block.powerplus.ascendantliquidgenerator": "Ascendant Liquid Generator",
+  "block.powerplus.radiantliquidgenerator": "Radiant Liquid Generator",
+  "block.powerplus.creativeliquidgenerator": "Creative Liquid Generator",
+
+  "block.powerplus.basicsolidgenerator": "Basic Solid Generator",
+  "block.powerplus.advancedsolidgenerator": "Advanced Solid Generator",
+  "block.powerplus.elitesolidgenerator": "Elite Solid Generator",
+  "block.powerplus.superiorsolidgenerator": "Superior Solid Generator",
+  "block.powerplus.legendarysolidgenerator": "Legendary Solid Generator",
+  "block.powerplus.ascendantsolidgenerator": "Ascendant Solid Generator",
+  "block.powerplus.radiantsolidgenerator": "Radiant Solid Generator",
+  "block.powerplus.creativesolidgenerator": "Creative Solid Generator",
+
+
+  "blockentity.powerplus.inductionsmelter": "Induction Smelter",
 
   "tooltip.powerplus.upgradetier1.tooltip.shift": "Press §eShift§r for more Information!",
   "tooltip.powerplus.upgradetier1.tooltip.1": "This is the Upgrade Component of powerplus",

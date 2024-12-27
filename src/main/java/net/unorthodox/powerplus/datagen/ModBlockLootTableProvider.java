@@ -58,6 +58,26 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.RADIANTTHERMOGENERATOR.get());
         dropSelf(ModBlocks.CREATIVETHERMOGENERATOR.get());
 
+        dropSelf(ModBlocks.BASICLIQUIDGENERATOR.get());
+        dropSelf(ModBlocks.ADVANCEDLIQUIDGENERATOR.get());
+        dropSelf(ModBlocks.ELITELIQUIDGENERATOR.get());
+        dropSelf(ModBlocks.SUPERIORLIQUIDGENERATOR.get());
+        dropSelf(ModBlocks.LEGENDARYLIQUIDGENERATOR.get());
+        dropSelf(ModBlocks.ASCENDANTLIQUIDGENERATOR.get());
+        dropSelf(ModBlocks.RADIANTLIQUIDGENERATOR.get());
+        dropSelf(ModBlocks.CREATIVELIQUIDGENERATOR.get());
+
+        dropSelf(ModBlocks.BASICSOLIDGENERATOR.get());
+        dropSelf(ModBlocks.ADVANCEDSOLIDGENERATOR.get());
+        dropSelf(ModBlocks.ELITESOLIDGENERATOR.get());
+        dropSelf(ModBlocks.SUPERIORSOLIDGENERATOR.get());
+        dropSelf(ModBlocks.LEGENDARYSOLIDGENERATOR.get());
+        dropSelf(ModBlocks.ASCENDANTSOLIDGENERATOR.get());
+        dropSelf(ModBlocks.RADIANTSOLIDGENERATOR.get());
+        dropSelf(ModBlocks.CREATIVESOLIDGENERATOR.get());
+
+        dropSelf(ModBlocks.INDUCTIONSMELTER.get());
+
     }
         // Blocks that drop Something Else
 

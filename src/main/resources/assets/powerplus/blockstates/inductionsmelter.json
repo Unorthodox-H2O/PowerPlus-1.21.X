@@ -1,0 +1,39 @@
+{
+  "variants": {
+          "facing=east,lit=false": {
+  "model": "powerplus:block/inductionsmelteroff",
+            "y": 90
+      },
+          "facing=east,lit=true": {
+  "model": "powerplus:block/inductionsmelteron",
+            "y": 90
+      },
+
+      "facing=north,lit=false": {
+  "model": "powerplus:block/inductionsmelteroff"
+
+      },
+      "facing=north,lit=true": {
+  "model": "powerplus:block/inductionsmelteron"
+
+      },
+
+      "facing=south,lit=false": {
+  "model": "powerplus:block/inductionsmelteroff",
+        "y": 180
+      },
+      "facing=south,lit=true": {
+  "model": "powerplus:block/inductionsmelteron",
+        "y": 180
+      },
+
+      "facing=west,lit=false": {
+  "model": "powerplus:block/inductionsmelteroff",
+        "y": 270
+      },
+    "facing=west,lit=true": {
+  "model": "powerplus:block/inductionsmelteron",
+        "y": 270
+      }
+  }
+}

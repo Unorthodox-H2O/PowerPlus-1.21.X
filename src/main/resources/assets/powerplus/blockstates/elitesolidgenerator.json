@@ -1,0 +1,23 @@
+{
+  "variants": {
+          "facing=east": {
+  "model": "powerplus:block/elitesolidgenerator",
+            "y": 90
+      },
+
+      "facing=north": {
+  "model": "powerplus:block/elitesolidgenerator"
+
+      },
+
+      "facing=south": {
+  "model": "powerplus:block/elitesolidgenerator",
+            "y": 180
+      },
+
+      "facing=west": {
+  "model": "powerplus:block/elitesolidgenerator",
+        "y": 270
+      }
+  }
+}

@@ -1,9 +1,14 @@
 package net.unorthodox.powerplus;
 
 import net.minecraft.world.item.CreativeModeTabs;
+import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.unorthodox.powerplus.block.ModBlocks;
+import net.unorthodox.powerplus.block.entity.ModBlockEntities;
 import net.unorthodox.powerplus.item.ModCreativeModeTabs;
 import net.unorthodox.powerplus.item.ModItems;
+import net.unorthodox.powerplus.recipe.ModRecipes;
+import net.unorthodox.powerplus.screen.ModMenuTypes;
+import net.unorthodox.powerplus.screen.machines.inductionsmelter.InductionSmelterScreen;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -41,6 +46,9 @@ public class PowerPlus {
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+        ModRecipes.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
@@ -87,9 +95,12 @@ public class PowerPlus {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            // Some client setup code
-            LOGGER.info("HELLO FROM CLIENT SETUP");
-            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+
+        }
+
+        @SubscribeEvent
+        public static void registerScreens(RegisterMenuScreensEvent event){
+            event.register(ModMenuTypes.INDUCTIONSMELTER_MENU.get(), InductionSmelterScreen::new);
         }
     }
 }

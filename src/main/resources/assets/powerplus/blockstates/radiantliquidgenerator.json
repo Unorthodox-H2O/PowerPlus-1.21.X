@@ -1,0 +1,23 @@
+{
+  "variants": {
+          "facing=east": {
+  "model": "powerplus:block/radiantliquidgenerator",
+            "y": 180
+      },
+
+      "facing=north": {
+  "model": "powerplus:block/radiantliquidgenerator",
+            "y": 90
+      },
+
+      "facing=south": {
+  "model": "powerplus:block/radiantliquidgenerator",
+            "y": 270
+      },
+
+      "facing=west": {
+  "model": "powerplus:block/radiantliquidgenerator"
+
+      }
+  }
+}

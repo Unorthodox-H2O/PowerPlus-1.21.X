@@ -78,6 +78,9 @@ public class ModCreativeModeTabs {
                 pOutput.accept(ModBlocks.CERIUM_BENK);
                 pOutput.accept(ModBlocks.TERBIUM_BENK);
 
+                //Machines
+                pOutput.accept(ModBlocks.INDUCTIONSMELTER);
+
                 //Generators
                 pOutput.accept(ModBlocks.BASICTHERMOGENERATOR);
                 pOutput.accept(ModBlocks.ADVANCEDTHERMOGENERATOR);
@@ -87,6 +90,24 @@ public class ModCreativeModeTabs {
                 pOutput.accept(ModBlocks.ASCENDANTTHERMOGENERATOR);
                 pOutput.accept(ModBlocks.RADIANTTHERMOGENERATOR);
                 pOutput.accept(ModBlocks.CREATIVETHERMOGENERATOR);
+
+                pOutput.accept(ModBlocks.BASICLIQUIDGENERATOR);
+                pOutput.accept(ModBlocks.ADVANCEDLIQUIDGENERATOR);
+                pOutput.accept(ModBlocks.ELITELIQUIDGENERATOR);
+                pOutput.accept(ModBlocks.SUPERIORLIQUIDGENERATOR);
+                pOutput.accept(ModBlocks.LEGENDARYLIQUIDGENERATOR);
+                pOutput.accept(ModBlocks.ASCENDANTLIQUIDGENERATOR);
+                pOutput.accept(ModBlocks.RADIANTLIQUIDGENERATOR);
+                pOutput.accept(ModBlocks.CREATIVELIQUIDGENERATOR);
+
+                pOutput.accept(ModBlocks.BASICSOLIDGENERATOR);
+                pOutput.accept(ModBlocks.ADVANCEDSOLIDGENERATOR);
+                pOutput.accept(ModBlocks.ELITESOLIDGENERATOR);
+                pOutput.accept(ModBlocks.SUPERIORSOLIDGENERATOR);
+                pOutput.accept(ModBlocks.LEGENDARYSOLIDGENERATOR);
+                pOutput.accept(ModBlocks.ASCENDANTSOLIDGENERATOR);
+                pOutput.accept(ModBlocks.RADIANTSOLIDGENERATOR);
+                pOutput.accept(ModBlocks.CREATIVESOLIDGENERATOR);
 
 
             }).build());
