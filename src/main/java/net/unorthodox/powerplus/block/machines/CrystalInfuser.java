@@ -28,15 +28,15 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.unorthodox.powerplus.block.entity.ModBlockEntities;
-import net.unorthodox.powerplus.block.entity.machines.InductionSmelterBlockEntity;
+import net.unorthodox.powerplus.block.entity.machines.CrystalInfuserBlockEntity;
 import org.jetbrains.annotations.Nullable;
 
-public class InductionSmelter extends BaseEntityBlock {
+public class CrystalInfuser extends BaseEntityBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty LIT = BlockStateProperties.LIT;
-    public static final MapCodec<InductionSmelter> CODEC = simpleCodec(InductionSmelter::new);
+    public static final MapCodec<CrystalInfuser> CODEC = simpleCodec(CrystalInfuser::new);
 
-    public InductionSmelter(Properties pProperties) {
+    public CrystalInfuser(Properties pProperties) {
         super (pProperties);
     }
     @Override
@@ -70,7 +70,7 @@ public class InductionSmelter extends BaseEntityBlock {
 
     @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
-        return new InductionSmelterBlockEntity(pPos, pState);
+        return new CrystalInfuserBlockEntity(pPos, pState);
     }
 
     @Override
@@ -81,8 +81,8 @@ public class InductionSmelter extends BaseEntityBlock {
     public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving) {
         if (pState.getBlock() != pNewState.getBlock()) {
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
-            if (blockEntity instanceof InductionSmelterBlockEntity inductionSmelterBlockEntity) {
-                inductionSmelterBlockEntity.drops();
+            if (blockEntity instanceof CrystalInfuserBlockEntity crystalInfuserBlockEntity) {
+                crystalInfuserBlockEntity.drops();
             }
         }
 
@@ -94,8 +94,8 @@ public class InductionSmelter extends BaseEntityBlock {
                                               Player pPlayer, InteractionHand pHand, BlockHitResult pHitResult) {
         if (!pLevel.isClientSide()) {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
-            if(entity instanceof InductionSmelterBlockEntity inductionSmelterBlockEntity) {
-                ((ServerPlayer) pPlayer).openMenu(new SimpleMenuProvider(inductionSmelterBlockEntity, Component.literal("Induction Smelter")), pPos);
+            if(entity instanceof CrystalInfuserBlockEntity crystalInfuserBlockEntity) {
+                ((ServerPlayer) pPlayer).openMenu(new SimpleMenuProvider(crystalInfuserBlockEntity, Component.literal("Induction Smelter")), pPos);
             } else {
                 throw new IllegalStateException("Our Container provider is missing!");
             }
@@ -111,7 +111,7 @@ public class InductionSmelter extends BaseEntityBlock {
             return null;
         }
 
-        return createTickerHelper(pBlockEntityType, ModBlockEntities.INDUCTION_SMELTER_BE.get(),
+        return createTickerHelper(pBlockEntityType, ModBlockEntities.CRYSTAL_INFUSER_BE.get(),
                 (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));
     }
 
@@ -140,8 +140,8 @@ public class InductionSmelter extends BaseEntityBlock {
 
         level.addParticle(ParticleTypes.SMOKE, xPos + xOffsets, yPos + yOffset, zPos + zOffset, 0.0, 0.0, 0.0);
 
-        if(level.getBlockEntity(pos) instanceof InductionSmelterBlockEntity inductionSmelterBlockEntity && !inductionSmelterBlockEntity.itemHandler.getStackInSlot(1).isEmpty()) {
-            level.addParticle(new ItemParticleOption(ParticleTypes.ITEM, inductionSmelterBlockEntity.itemHandler.getStackInSlot(1)),
+        if(level.getBlockEntity(pos) instanceof CrystalInfuserBlockEntity crystalInfuserBlockEntity && !crystalInfuserBlockEntity.itemHandler.getStackInSlot(1).isEmpty()) {
+            level.addParticle(new ItemParticleOption(ParticleTypes.ITEM, crystalInfuserBlockEntity.itemHandler.getStackInSlot(1)),
                     xPos + xOffsets, yPos + yOffset, zPos + zOffset, 0.0, 0.0, 0.0);
         }
     }

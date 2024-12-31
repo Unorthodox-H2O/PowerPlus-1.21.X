@@ -1,4 +1,4 @@
-package net.unorthodox.powerplus.screen.machines.inductionsmelter;
+package net.unorthodox.powerplus.screen.machines.crystalinfuser;
 
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
@@ -9,22 +9,22 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.neoforged.neoforge.items.SlotItemHandler;
 import net.unorthodox.powerplus.block.ModBlocks;
-import net.unorthodox.powerplus.block.entity.machines.InductionSmelterBlockEntity;
+import net.unorthodox.powerplus.block.entity.machines.CrystalInfuserBlockEntity;
 import net.unorthodox.powerplus.screen.ModMenuTypes;
 
-public class InductionSmelterMenu extends AbstractContainerMenu {
-    public final InductionSmelterBlockEntity blockEntity;
+public class CrystalInfuserMenu extends AbstractContainerMenu {
+    public final CrystalInfuserBlockEntity blockEntity;
     private final Level level;
     private final ContainerData data;
 
 
-    public InductionSmelterMenu(int pContainerId, Inventory inv, FriendlyByteBuf extraData) {
+    public CrystalInfuserMenu(int pContainerId, Inventory inv, FriendlyByteBuf extraData) {
         this(pContainerId, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(2));
     }
 
-    public InductionSmelterMenu(int pContainerId, Inventory inv, BlockEntity entity, ContainerData data) {
-        super(ModMenuTypes.INDUCTIONSMELTER_MENU.get(), pContainerId);
-        blockEntity = ((InductionSmelterBlockEntity) entity);
+    public CrystalInfuserMenu(int pContainerId, Inventory inv, BlockEntity entity, ContainerData data) {
+        super(ModMenuTypes.CRYSTALINFUSER_MENU.get(), pContainerId);
+        blockEntity = ((CrystalInfuserBlockEntity) entity);
         this.level = inv.player.level();
         this.data = data;
 
@@ -115,7 +115,7 @@ public class InductionSmelterMenu extends AbstractContainerMenu {
     @Override
     public boolean stillValid(Player pPlayer) {
         return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()),
-                pPlayer, ModBlocks.INDUCTIONSMELTER.get());
+                pPlayer, ModBlocks.CRYSTALINFUSER.get());
     }
 
     private void addPlayerInventory(Inventory playerInventory) {

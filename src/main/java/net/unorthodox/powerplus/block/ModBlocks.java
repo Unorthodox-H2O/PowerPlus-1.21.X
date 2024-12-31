@@ -108,8 +108,8 @@ public class ModBlocks {
         public static final DeferredBlock<Block> CREATIVESOLIDGENERATOR = registerBlock("creativesolidgenerator",
                 () -> new CreativeSolidGenerator(BlockBehaviour.Properties.of().noOcclusion().requiresCorrectToolForDrops()));
 
-        public static final DeferredBlock<Block> INDUCTIONSMELTER = registerBlock("inductionsmelter",
-                () -> new InductionSmelter(BlockBehaviour.Properties.of().noOcclusion().requiresCorrectToolForDrops()));
+        public static final DeferredBlock<Block> CRYSTALINFUSER = registerBlock("crystalinfuser",
+                () -> new CrystalInfuser(BlockBehaviour.Properties.of().noOcclusion().requiresCorrectToolForDrops()));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block){
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "powerplus:block/inductionsmelteron",
-		"particle": "powerplus:block/inductionsmelteron"
+		"0": "powerplus:block/crystalinfuseron",
+		"particle": "powerplus:block/crystalinfuseron"
 	},
 	"elements": [
 		{

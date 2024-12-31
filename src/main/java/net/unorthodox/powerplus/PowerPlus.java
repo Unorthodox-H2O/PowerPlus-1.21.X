@@ -8,12 +8,11 @@ import net.unorthodox.powerplus.item.ModCreativeModeTabs;
 import net.unorthodox.powerplus.item.ModItems;
 import net.unorthodox.powerplus.recipe.ModRecipes;
 import net.unorthodox.powerplus.screen.ModMenuTypes;
-import net.unorthodox.powerplus.screen.machines.inductionsmelter.InductionSmelterScreen;
+import net.unorthodox.powerplus.screen.machines.crystalinfuser.CrystalInfuserScreen;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.api.distmarker.Dist;
@@ -100,7 +99,7 @@ public class PowerPlus {
 
         @SubscribeEvent
         public static void registerScreens(RegisterMenuScreensEvent event){
-            event.register(ModMenuTypes.INDUCTIONSMELTER_MENU.get(), InductionSmelterScreen::new);
+            event.register(ModMenuTypes.CRYSTALINFUSER_MENU.get(), CrystalInfuserScreen::new);
         }
     }
 }

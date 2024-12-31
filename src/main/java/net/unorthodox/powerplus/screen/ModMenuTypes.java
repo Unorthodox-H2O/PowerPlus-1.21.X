@@ -9,7 +9,7 @@ import net.neoforged.neoforge.network.IContainerFactory;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.unorthodox.powerplus.PowerPlus;
-import net.unorthodox.powerplus.screen.machines.inductionsmelter.InductionSmelterMenu;
+import net.unorthodox.powerplus.screen.machines.crystalinfuser.CrystalInfuserMenu;
 
 public class ModMenuTypes {
     public static final DeferredRegister<MenuType<?>> MENUS =
@@ -18,8 +18,8 @@ public class ModMenuTypes {
     //public static final DeferredHolder<MenuType<?>, MenuType<PedestalMenu>> PEDESTAL_MENU =
       //      registerMenuType("pedestal_menu", PedestalMenu::new);
 
-    public static final DeferredHolder<MenuType<?>, MenuType<InductionSmelterMenu>> INDUCTIONSMELTER_MENU =
-            registerMenuType("induction_smelter_menu", InductionSmelterMenu::new);
+    public static final DeferredHolder<MenuType<?>, MenuType<CrystalInfuserMenu>> CRYSTALINFUSER_MENU =
+            registerMenuType("crystal_infuser_menu", CrystalInfuserMenu::new);
 
     private static <T extends AbstractContainerMenu> DeferredHolder<MenuType<?>, MenuType<T>> registerMenuType(String name,
                                                                                                                IContainerFactory<T> factory) {

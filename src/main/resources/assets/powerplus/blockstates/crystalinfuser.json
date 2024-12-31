@@ -1,38 +1,38 @@
 {
   "variants": {
           "facing=east,lit=false": {
-  "model": "powerplus:block/inductionsmelteroff",
+  "model": "powerplus:block/crystalinfuseroff",
             "y": 90
       },
           "facing=east,lit=true": {
-  "model": "powerplus:block/inductionsmelteron",
+  "model": "powerplus:block/crystalinfuseron",
             "y": 90
       },
 
       "facing=north,lit=false": {
-  "model": "powerplus:block/inductionsmelteroff"
+  "model": "powerplus:block/crystalinfuseroff"
 
       },
       "facing=north,lit=true": {
-  "model": "powerplus:block/inductionsmelteron"
+  "model": "powerplus:block/crystalinfuseron"
 
       },
 
       "facing=south,lit=false": {
-  "model": "powerplus:block/inductionsmelteroff",
+  "model": "powerplus:block/crystalinfuseroff",
         "y": 180
       },
       "facing=south,lit=true": {
-  "model": "powerplus:block/inductionsmelteron",
+  "model": "powerplus:block/crystalinfuseron",
         "y": 180
       },
 
       "facing=west,lit=false": {
-  "model": "powerplus:block/inductionsmelteroff",
+  "model": "powerplus:block/crystalinfuseroff",
         "y": 270
       },
     "facing=west,lit=true": {
-  "model": "powerplus:block/inductionsmelteron",
+  "model": "powerplus:block/crystalinfuseron",
         "y": 270
       }
   }

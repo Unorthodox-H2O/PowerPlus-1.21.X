@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "powerplus:block/inductionsmelteroff",
-		"particle": "powerplus:block/inductionsmelteroff"
+		"0": "powerplus:block/crystalinfuserroff",
+		"particle": "powerplus:block/crystalinfuseroff"
 	},
 	"elements": [
 		{

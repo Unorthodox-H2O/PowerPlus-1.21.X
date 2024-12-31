@@ -15,13 +15,13 @@ public class ModRecipes {
     public static final DeferredRegister<RecipeType<?>> TYPES =
             DeferredRegister.create(Registries.RECIPE_TYPE, PowerPlus.MOD_ID);
 
-    public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<InductionSmelterRecipe>> INDUCTIONSMELTER_SERIALIZER =
-            SERIALIZERS.register("induction_smelting", InductionSmelterRecipe.Serializer::new);
-    public static final DeferredHolder<RecipeType<?>, RecipeType<InductionSmelterRecipe>> INDUCTIONSMELTER_TYPE =
-            TYPES.register("induction_smelting", () -> new RecipeType<InductionSmelterRecipe>() {
+    public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<CrystalInfuserRecipe>> CRYSTALINFUSER_SERIALIZER =
+            SERIALIZERS.register("crystal_infusing", CrystalInfuserRecipe.Serializer::new);
+    public static final DeferredHolder<RecipeType<?>, RecipeType<CrystalInfuserRecipe>> CRYSTALINFUSER_TYPE =
+            TYPES.register("crystal_infusing", () -> new RecipeType<CrystalInfuserRecipe>() {
                 @Override
                 public String toString() {
-                    return "induction_smelting";
+                    return "crystal_infusing";
                 }
             });
 

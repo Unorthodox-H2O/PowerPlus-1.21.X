@@ -1,4 +1,4 @@
-package net.unorthodox.powerplus.screen.machines.inductionsmelter;
+package net.unorthodox.powerplus.screen.machines.crystalinfuser;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.GuiGraphics;
@@ -9,15 +9,15 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.unorthodox.powerplus.PowerPlus;
 
-public class InductionSmelterScreen extends AbstractContainerScreen<InductionSmelterMenu> {
+public class CrystalInfuserScreen extends AbstractContainerScreen<CrystalInfuserMenu> {
     public static final ResourceLocation GUI_TEXTURE =
-            ResourceLocation.fromNamespaceAndPath(PowerPlus.MOD_ID, "textures/gui/inductionsmelter/inductionsmelter_gui.png");
+            ResourceLocation.fromNamespaceAndPath(PowerPlus.MOD_ID, "textures/gui/crystalinfuser/crystalinfuser_gui.png");
     private static final ResourceLocation ARROW_TEXTURE =
-            ResourceLocation.fromNamespaceAndPath(PowerPlus.MOD_ID, "textures/gui/inductionsmelter/arrow_progress.png");
+            ResourceLocation.fromNamespaceAndPath(PowerPlus.MOD_ID, "textures/gui/crystalinfuser/arrow_progress.png");
     private static final ResourceLocation CRYSTAL_TEXTURE =
             ResourceLocation.parse("textures/block/amethyst_cluster.png");
 
-    public InductionSmelterScreen(InductionSmelterMenu menu, Inventory playerInventory, Component title) {
+    public CrystalInfuserScreen(CrystalInfuserMenu menu, Inventory playerInventory, Component title) {
         super(menu, playerInventory, title);
     }
 

@@ -3,12 +3,6 @@
   "ingredient": {
     "item": "powerplus:samarium"
   },
-  "ingredient": {
-    "item": "powerplus:scandium"
-  },
-  "ingredient": {
-    "item": "powerplus:blank_upgrade"
-  },
 
   "result": {
     "id": "powerplus:advanced_upgrade"
