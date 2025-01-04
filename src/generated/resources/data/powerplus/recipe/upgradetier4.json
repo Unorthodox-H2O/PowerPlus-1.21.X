@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "powerplus:europium_block"
+    },
+    "G": {
+      "item": "minecraft:gold_block"
+    },
+    "T": {
+      "item": "powerplus:advancedupgradeblank"
+    }
+  },
+  "pattern": [
+    "GEG",
+    "ETE",
+    "GEG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "powerplus:upgradetier4"
+  }
+}

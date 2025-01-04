@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "powerplus:upgradeblank"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "S": {
+      "item": "powerplus:forged_scrap_ingot"
+    }
+  },
+  "pattern": [
+    "SDS",
+    "DBD",
+    "SDS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "powerplus:advancedupgradeblank"
+  }
+}

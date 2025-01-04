@@ -1,0 +1,21 @@
+// 1.21.1	2024-12-24T19:24:33.570447	Item Models: powerplus
+83345a9aa068c02e398b9988f3a1959ff8884216 assets/powerplus/models/item/advancedupgradeblank.json
+df98af94bc7f70d8febfbe6fa77b9730dd6f1b7c assets/powerplus/models/item/cerium.json
+0904d410aff6df1febbfcc96eba2c7b9db8a552c assets/powerplus/models/item/europium.json
+58b33cdcb450bc6b03f0e1ce104b7c45fa37f748 assets/powerplus/models/item/forged_scrap.json
+a2a6071eeea94b756a980f470b8aea378c751dd8 assets/powerplus/models/item/forged_scrap_dust.json
+3b5de1390a16fdf54567e309478d93e7d8ffb48e assets/powerplus/models/item/forged_scrap_ingot.json
+3905fe482b998bb5bce78124d74c8c23fb3d81d2 assets/powerplus/models/item/raw_cerium.json
+deda1adcdaff304af7b5ca238fa2bb712d872094 assets/powerplus/models/item/raw_europium.json
+65d1c5533f28eb685a8fc3f85e5718c93bedbf06 assets/powerplus/models/item/raw_samarium.json
+7dfd78c9379151da7c418ff39d2af35d95be0ad7 assets/powerplus/models/item/raw_scandium.json
+3791822ba38479352b85a61939da79e6d0c4a8c4 assets/powerplus/models/item/raw_terbium.json
+ce7a1e7ff6eda15a226cefd514bdae65a8acec86 assets/powerplus/models/item/samarium.json
+bf2d63e5e39d96303a337ce5cbb57a73a7fb65c2 assets/powerplus/models/item/scandium.json
+54a726e74a0da7dbd165caa455b5e85635c8f5d3 assets/powerplus/models/item/terbium.json
+aa8476d5a73e529a6393875b3ee25d272c3b75a0 assets/powerplus/models/item/upgradeblank.json
+11c329faef9a308ed87b438f0f484713bf06b0c5 assets/powerplus/models/item/upgradetier1.json
+2e4a4f919d8cbd941652e96b473be23d08f7734e assets/powerplus/models/item/upgradetier2.json
+d056257b090400c20a74b249961770996e015cfe assets/powerplus/models/item/upgradetier3.json
+0f9520fa9289fc7a1a14e670b54e1438829313d4 assets/powerplus/models/item/upgradetier4.json
+84009e913d1c0ac8151244ee8be3e06b0ae07365 assets/powerplus/models/item/upgradetier5.json

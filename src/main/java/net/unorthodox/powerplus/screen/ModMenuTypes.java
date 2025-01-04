@@ -20,6 +20,8 @@ public class ModMenuTypes {
 
     public static final DeferredHolder<MenuType<?>, MenuType<CrystalInfuserMenu>> CRYSTALINFUSER_MENU =
             registerMenuType("crystal_infuser_menu", CrystalInfuserMenu::new);
+    public static final DeferredHolder<MenuType<?>, MenuType<CoalGrinderMenu>> COAL_GRINDER_MENU =
+            registerMenuType("coal_grinder_menu", CoalGrinderMenu::new);
 
     private static <T extends AbstractContainerMenu> DeferredHolder<MenuType<?>, MenuType<T>> registerMenuType(String name,
                                                                                                                IContainerFactory<T> factory) {

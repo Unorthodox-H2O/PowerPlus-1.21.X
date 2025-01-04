@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "minecraft:iron_block"
+    },
+    "S": {
+      "item": "powerplus:samarium_block"
+    },
+    "T": {
+      "item": "powerplus:advancedupgradeblank"
+    }
+  },
+  "pattern": [
+    "ISI",
+    "STS",
+    "ISI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "powerplus:upgradetier3"
+  }
+}

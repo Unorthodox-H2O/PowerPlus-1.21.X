@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_cerium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "powerplus:raw_cerium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "powerplus:cerium_from_blasting_raw_cerium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_raw_cerium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "powerplus:cerium_from_blasting_raw_cerium"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "powerplus:upgradeblank"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_upgradeblank": {
+      "conditions": {
+        "items": [
+          {
+            "items": "powerplus:upgradeblank"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_upgradeblank"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "powerplus:upgradeblank"
+    ]
+  }
+}

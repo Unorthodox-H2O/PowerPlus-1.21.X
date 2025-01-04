@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "europium",
+  "ingredient": {
+    "item": "powerplus:raw_samarium"
+  },
+  "result": {
+    "count": 1,
+    "id": "powerplus:samarium"
+  }
+}

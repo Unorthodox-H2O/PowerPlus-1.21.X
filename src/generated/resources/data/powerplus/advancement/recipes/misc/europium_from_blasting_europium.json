@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_europium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "powerplus:europium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "powerplus:europium_from_blasting_europium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_europium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "powerplus:europium_from_blasting_europium"
+    ]
+  }
+}

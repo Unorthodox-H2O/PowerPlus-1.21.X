@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "powerplus:cerium_block"
+    },
+    "D": {
+      "item": "minecraft:diamond_block"
+    },
+    "T": {
+      "item": "powerplus:advancedupgradeblank"
+    }
+  },
+  "pattern": [
+    "DCD",
+    "CTC",
+    "DCD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "powerplus:upgradetier5"
+  }
+}
