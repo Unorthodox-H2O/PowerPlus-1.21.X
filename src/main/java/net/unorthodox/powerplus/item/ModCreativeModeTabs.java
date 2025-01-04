@@ -79,7 +79,7 @@ public class ModCreativeModeTabs {
                 pOutput.accept(ModBlocks.TERBIUM_BENK);
 
                 //Machines
-                pOutput.accept(ModBlocks.INDUCTIONSMELTER);
+                pOutput.accept(ModBlocks.CRYSTALINFUSER);
 
                 //Generators
                 pOutput.accept(ModBlocks.BASICTHERMOGENERATOR);
@@ -108,7 +108,6 @@ public class ModCreativeModeTabs {
                 pOutput.accept(ModBlocks.ASCENDANTSOLIDGENERATOR);
                 pOutput.accept(ModBlocks.RADIANTSOLIDGENERATOR);
                 pOutput.accept(ModBlocks.CREATIVESOLIDGENERATOR);
-
 
             }).build());
 

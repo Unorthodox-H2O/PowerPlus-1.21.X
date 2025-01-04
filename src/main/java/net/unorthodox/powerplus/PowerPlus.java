@@ -2,6 +2,7 @@ package net.unorthodox.powerplus;
 
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
+import net.neoforged.neoforge.registries.datamaps.RegisterDataMapTypesEvent;
 import net.unorthodox.powerplus.block.ModBlocks;
 import net.unorthodox.powerplus.block.entity.ModBlockEntities;
 import net.unorthodox.powerplus.item.ModCreativeModeTabs;
@@ -10,9 +11,7 @@ import net.unorthodox.powerplus.recipe.ModRecipes;
 import net.unorthodox.powerplus.screen.ModMenuTypes;
 import net.unorthodox.powerplus.screen.machines.crystalinfuser.CrystalInfuserScreen;
 import org.slf4j.Logger;
-
 import com.mojang.logging.LogUtils;
-
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.api.distmarker.Dist;
@@ -59,6 +58,10 @@ public class PowerPlus {
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+    }
+
+    private void registerDataTypeMaps(RegisterDataMapTypesEvent event) {
+
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

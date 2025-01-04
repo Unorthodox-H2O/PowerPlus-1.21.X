@@ -20,8 +20,8 @@ import static net.unorthodox.powerplus.util.ModTags.Items.*;
 public class ModItemTagProvider extends ItemTagsProvider {
     //Add Public Static Providers
     public static final TagKey<Item> BENK_ACTIVATION_TIER_1 = ItemTags.create(ResourceLocation.fromNamespaceAndPath("powerplus", "benk_activation_tier_1"));
-    public static final TagKey<Item> WRENCHES = ItemTags.create(ResourceLocation.fromNamespaceAndPath("powerplus", "wrench"));
-    //public static final TagKey<Item> TOOLS_WRENCH = forgeTag("tools/wrench");
+
+    //public static final TagKey<Item> WRENCHES = forgeTag("tools/wrench");
     //public static final TagKey<Item> BOWS = forgeTag("tools/bow");
     //public static final TagKey<Item> RANGED_WEAPON = forgeTag("tools/ranged_weapon");
     //public static final TagKey<Item> MELEE_WEAPON = forgeTag("tools/melee_weapon");
@@ -34,6 +34,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
     }
     private static TagKey<Item> forgeTag(String name){
         return ItemTags.create(ResourceLocation.fromNamespaceAndPath("C", name));
+
     }
 
 
@@ -51,6 +52,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(Items.DIAMOND);
         this.tag(TRANSFORMABLE_TIER5_ITEMS)
                 .add(Items.NETHERITE_INGOT);
+
 
 
         //this.tag(TOOLS_WRENCH).add((Item)Registration.ArtifexWrench.get());

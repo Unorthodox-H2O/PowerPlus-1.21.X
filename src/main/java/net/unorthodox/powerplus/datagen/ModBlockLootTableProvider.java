@@ -76,7 +76,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.RADIANTSOLIDGENERATOR.get());
         dropSelf(ModBlocks.CREATIVESOLIDGENERATOR.get());
 
-        dropSelf(ModBlocks.INDUCTIONSMELTER.get());
+        dropSelf(ModBlocks.CRYSTALINFUSER.get());
 
     }
         // Blocks that drop Something Else

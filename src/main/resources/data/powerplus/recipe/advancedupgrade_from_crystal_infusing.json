@@ -1,0 +1,9 @@
+{
+  "type": "powerplus:crystal_infusing",
+  "ingredient": {
+    "item": "powerplus:samarium"
+  },
+  "result": {
+    "id": "powerplus:advancedupgradeblank"
+  }
+}

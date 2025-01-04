@@ -25,8 +25,11 @@ public class CrystalInfuserScreen extends AbstractContainerScreen<CrystalInfuser
     protected void init() {
         super.init();
 
-        this.inventoryLabelY = 200;
-        this.titleLabelY = 200;
+        this.inventoryLabelY = 73;
+        this.titleLabelY = 4;
+        this.inventoryLabelX = 27;
+        this.titleLabelX = 27;
+
     }
 
     @Override

@@ -23,7 +23,6 @@ import net.neoforged.neoforge.items.ItemStackHandler;
 import net.unorthodox.powerplus.block.entity.ModBlockEntities;
 import net.unorthodox.powerplus.block.machines.CrystalInfuser;
 import net.unorthodox.powerplus.recipe.CrystalInfuserRecipe;
-import net.unorthodox.powerplus.recipe.InductionSmelterRecipe;
 import net.unorthodox.powerplus.recipe.CrystalInfuserRecipeInput;
 import net.unorthodox.powerplus.recipe.ModRecipes;
 import net.unorthodox.powerplus.screen.machines.crystalinfuser.CrystalInfuserMenu;
@@ -52,7 +51,7 @@ public class CrystalInfuserBlockEntity extends BlockEntity implements MenuProvid
     private int maxProgress = 72;
     private final int DEFAULT_MAX_PROGRESS = 72;
 
-    public CrystallizerBlockEntity(BlockPos pPos, BlockState pBlockState) {
+    public CrystalInfuserBlockEntity(BlockPos pPos, BlockState pBlockState) {
         super(ModBlockEntities.CRYSTAL_INFUSER_BE.get(), pPos, pBlockState);
         this.data = new ContainerData() {
             @Override
@@ -81,7 +80,7 @@ public class CrystalInfuserBlockEntity extends BlockEntity implements MenuProvid
 
     @Override
     public Component getDisplayName() {
-        return Component.translatable("blockentity.mccourse.crystallizer");
+        return Component.translatable("blockentity.powerplus.crystalinfuser");
     }
 
     @Nullable

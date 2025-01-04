@@ -3,8 +3,10 @@ package net.unorthodox.powerplus.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.common.data.internal.NeoForgeBlockTagsProvider;
 import net.unorthodox.powerplus.block.ModBlocks;
 import net.unorthodox.powerplus.util.ModTags;
 import net.unorthodox.powerplus.PowerPlus;
@@ -35,6 +37,5 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.EUROPIUM_BLOCK.get())
                 .add(ModBlocks.CERIUM_BLOCK.get())
                 .add(ModBlocks.TERBIUM_BLOCK.get());
-
     }
 }

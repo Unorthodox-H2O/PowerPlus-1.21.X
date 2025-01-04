@@ -33,7 +33,7 @@ public class ModItems {
     public static final DeferredItem<Item> UPGRADETIER4 = ITEMS.register("upgradetier4",() -> new UpgradeTier4Item(new Item.Properties()));
     public static final DeferredItem<Item> UPGRADETIER5 = ITEMS.register("upgradetier5",() -> new UpgradeTier5Item(new Item.Properties()));
 
-
+    public static final DeferredItem<Item> WRENCH = ITEMS.registerItem("wrench", properties -> new Item(properties.stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

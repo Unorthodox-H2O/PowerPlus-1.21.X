@@ -17,7 +17,6 @@ public class CrystalInfuserMenu extends AbstractContainerMenu {
     private final Level level;
     private final ContainerData data;
 
-
     public CrystalInfuserMenu(int pContainerId, Inventory inv, FriendlyByteBuf extraData) {
         this(pContainerId, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(2));
     }
@@ -33,15 +32,15 @@ public class CrystalInfuserMenu extends AbstractContainerMenu {
 
         this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 0, 8, 62));
         this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 1, 54, 34));
-        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 2, 71, 51));
-        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 3, 71, 16));
-        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 4, 104, 34));
-        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 5, 152, 62));
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 2, 104, 34));
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 3, 152, 62));
 
         addDataSlots(data);
     }
 
-    public boolean isCrafting() {return data.get(0) > 0; }
+    public boolean isCrafting() {
+        return data.get(0) > 0;
+    }
 
     public int getScaledArrowProgress() {
         int progress = this.data.get(0);
@@ -51,14 +50,13 @@ public class CrystalInfuserMenu extends AbstractContainerMenu {
         return maxProgress != 0 && progress != 0 ? progress * arrowPixelSize / maxProgress : 0;
     }
 
-    public int getScaledCrystalProgress(){
+    public int getScaledCrystalProgress() {
         int progress = this.data.get(0);
         int maxProgress = this.data.get(1);
         int crystalPixelSize = 16;
 
         return maxProgress != 0 && progress != 0 ? progress * crystalPixelSize / maxProgress : 0;
     }
-
 
     // CREDIT GOES TO: diesieben07 | https://github.com/diesieben07/SevenCommons
     // must assign a slot number to each of the slots used by the GUI.
@@ -76,8 +74,7 @@ public class CrystalInfuserMenu extends AbstractContainerMenu {
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
     // THIS YOU HAVE TO DEFINE!
-    private static final int TE_INVENTORY_SLOT_COUNT = 6;  // must be the number of slots you have!
-
+    private static final int TE_INVENTORY_SLOT_COUNT = 4;  // must be the number of slots you have!
     @Override
     public ItemStack quickMoveStack(Player playerIn, int pIndex) {
         Slot sourceSlot = slots.get(pIndex);
@@ -110,7 +107,6 @@ public class CrystalInfuserMenu extends AbstractContainerMenu {
         sourceSlot.onTake(playerIn, sourceStack);
         return copyOfSourceStack;
     }
-
 
     @Override
     public boolean stillValid(Player pPlayer) {

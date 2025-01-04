@@ -95,7 +95,7 @@ public class CrystalInfuser extends BaseEntityBlock {
         if (!pLevel.isClientSide()) {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
             if(entity instanceof CrystalInfuserBlockEntity crystalInfuserBlockEntity) {
-                ((ServerPlayer) pPlayer).openMenu(new SimpleMenuProvider(crystalInfuserBlockEntity, Component.literal("Induction Smelter")), pPos);
+                ((ServerPlayer) pPlayer).openMenu(new SimpleMenuProvider(crystalInfuserBlockEntity, Component.literal("Crystal Infuser")), pPos);
             } else {
                 throw new IllegalStateException("Our Container provider is missing!");
             }
