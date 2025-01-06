@@ -14,11 +14,14 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeHolder;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.neoforged.neoforge.items.ComponentItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import net.unorthodox.powerplus.block.entity.ModBlockEntities;
 import net.unorthodox.powerplus.block.machines.CrystalInfuser;
@@ -78,6 +81,37 @@ public class CrystalInfuserBlockEntity extends BlockEntity implements MenuProvid
         };
     }
 
+    /*private boolean initBurn(ItemStack itemStack) {
+        ComponentItemHandler handler = new ComponentItemHandler(itemStack, JustDireDataComponents.ITEMSTACK_HANDLER.get(), 1);
+        ItemStack fuelStack = handler.getStackInSlot(0);
+
+        int burnTime = fuelStack.getBurnTime(RecipeType.SMELTING);
+        if (burnTime > 0) {
+            if (fuelStack.getItem() instanceof Coal_T1 direCoal) {
+                setFuelMultiplier(itemStack, direCoal.getBurnSpeedMultiplier());
+            } else if (fuelStack.getItem() instanceof BlockItem blockItem && blockItem.getBlock() instanceof CoalBlock_T1 coalBlock) {
+                setFuelMultiplier(itemStack, coalBlock.getBurnSpeedMultiplier());
+            } else if (fuelStack.getItem() instanceof FuelCanister) {
+                setFuelMultiplier(itemStack, FuelCanister.getBurnSpeedMultiplier(fuelStack));
+            } else {
+                setFuelMultiplier(itemStack, 1);
+            }
+            if (fuelStack.hasCraftingRemainingItem())
+                handler.setStackInSlot(0, fuelStack.getCraftingRemainingItem());
+            else {
+                fuelStack.shrink(1);
+                handler.setStackInSlot(0, fuelStack);
+            }
+
+
+            int counter = (int) (Math.floor(burnTime) / getBurnSpeedMultiplier(itemStack));
+            int maxBurn = counter;
+            itemStack.set(JustDireDataComponents.POCKETGEN_COUNTER, counter);
+            itemStack.set(JustDireDataComponents.POCKETGEN_MAXBURN, maxBurn);
+            return true;
+        }
+        return false;
+    }*/
     @Override
     public Component getDisplayName() {
         return Component.translatable("blockentity.powerplus.crystalinfuser");

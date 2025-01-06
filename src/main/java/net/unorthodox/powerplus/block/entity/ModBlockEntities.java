@@ -17,9 +17,7 @@ public class ModBlockEntities {
     public static final Supplier<BlockEntityType<CrystalInfuserBlockEntity>> CRYSTAL_INFUSER_BE =
             BLOCK_ENTITIES.register("crystal_infuser_be", () -> BlockEntityType.Builder.of(
                     CrystalInfuserBlockEntity::new, ModBlocks.CRYSTALINFUSER.get()).build(null));
-    public static final Supplier<BlockEntityType<CrystalInfuserBlockEntity>> COAL_GRINDER_BE =
-            BLOCK_ENTITIES.register("crystal_infuser_be", () -> BlockEntityType.Builder.of(
-                    CrystalInfuserBlockEntity::new, ModBlocks.CRYSTALINFUSER.get()).build(null));
+
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

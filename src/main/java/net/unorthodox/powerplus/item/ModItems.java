@@ -10,6 +10,7 @@ import net.unorthodox.powerplus.item.upgrades.benk.*;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(PowerPlus.MOD_ID);
+
     public static final DeferredItem<Item> SCANDIUM = ITEMS.registerSimpleItem("scandium");
     public static final DeferredItem<Item> RAW_SCANDIUM = ITEMS.registerSimpleItem("raw_scandium");
     public static final DeferredItem<Item> SAMARIUM = ITEMS.registerSimpleItem("cerium");
@@ -23,6 +24,7 @@ public class ModItems {
     public static final DeferredItem<Item> FORGED_SCRAP_INGOT = ITEMS.registerSimpleItem("forged_scrap_ingot");
     public static final DeferredItem<Item> FORGED_SCRAP_DUST = ITEMS.registerSimpleItem("forged_scrap_dust");
     public static final DeferredItem<Item> FORGED_SCRAP = ITEMS.registerSimpleItem("forged_scrap");
+    public static final DeferredItem<Item> IRON_DUST = ITEMS.registerSimpleItem("iron_dust");
 
     //Benk Upgrades
     public static final DeferredItem<Item> UPGRADEBLANK = ITEMS.registerSimpleItem("upgradeblank");

@@ -24,15 +24,6 @@ public class ModRecipes {
                     return "crystal_infusing";
                     }
                 });
-    public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<CoalGrinderRecipe>> COAL_GRINDER_SERIALIZER =
-            SERIALIZERS.register("grinding", CoalGrinderRecipe.Serializer::new);
-    public static final DeferredHolder<RecipeType<?>, RecipeType<CoalGrinderRecipe>> GRINDING_TYPE =
-            TYPES.register("grinding", () -> new RecipeType<CoalGrinderRecipe>() {
-                @Override
-                public String toString() {
-                    return "grinding";
-                    }
-                });
 
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);
