@@ -24,7 +24,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.unorthodox.powerplus.block.ModBlocks;
 import net.unorthodox.powerplus.item.ModItems;
 import net.unorthodox.powerplus.util.ItemPair;
-
+import oshi.util.tuples.Pair;
 
 
 import java.util.List;

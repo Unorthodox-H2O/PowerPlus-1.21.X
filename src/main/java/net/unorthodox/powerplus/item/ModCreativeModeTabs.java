@@ -35,6 +35,7 @@ public class ModCreativeModeTabs {
                 pOutput.accept(ModItems.FORGED_SCRAP_INGOT);
                 pOutput.accept(ModItems.FORGED_SCRAP_DUST);
                 pOutput.accept(ModItems.FORGED_SCRAP);
+                pOutput.accept(ModItems.IRON_DUST);
 
 
                 //Upgrades
