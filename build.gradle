@@ -16,6 +16,9 @@ tasks.named('wrapper', Wrapper).configure {
 version = mod_version
 group = mod_group_id
 
+def extraModsDir = "extra-mods"
+def extraAPIDir = "extra-api"
+
 repositories {
     mavenLocal()
     maven {
@@ -126,7 +129,7 @@ dependencies {
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
      compileOnly ("mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}")
-     runtimeOnly ("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
+     runtimeOnly ("mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}")
     // We add the full version to localRuntime, not runtimeOnly, so that we do not publish a dependency on it
     // localRuntime "mezz.jei:jei-${mc_version}-neoforge:${jei_version}"
     // Example mod dependency using a mod jar from ./libs with a flat dir repository
