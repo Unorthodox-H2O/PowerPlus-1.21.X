@@ -40,9 +40,6 @@ public class UpgradeTier1Item extends Item {
 
                 context.getItemInHand().shrink(1);
 
-               // context.getItemInHand().shrink(1, ((ServerLevel) level), context.getPlayer(),
-                      // item -> context.getPlayer().onEquippedItemBroken(item, EquipmentSlot.MAINHAND));
-
                 level.playSound(null, context.getClickedPos(), SoundEvents.GRINDSTONE_USE, SoundSource.BLOCKS);
             }
         }

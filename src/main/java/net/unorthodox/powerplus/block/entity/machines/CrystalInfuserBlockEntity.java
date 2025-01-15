@@ -7,6 +7,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -16,6 +17,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
@@ -34,7 +36,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Optional;
 
 public class CrystalInfuserBlockEntity extends BlockEntity implements MenuProvider {
-    public final ItemStackHandler itemHandler = new ItemStackHandler(4) {
+    public final ItemStackHandler itemHandler = new ItemStackHandler(3) {
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
@@ -42,12 +44,19 @@ public class CrystalInfuserBlockEntity extends BlockEntity implements MenuProvid
                 level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
             }
         }
+    
+        @Override
+        public boolean isItemValid(int slot, ItemStack stack) {
+            if (slot == OUTPUT_SLOT) {
+                return false;
+            }
+            return super.isItemValid(slot, stack);
+        }
     };
 
-    private static final int FLUID_ITEM_SLOT = 0;
-    private static final int INPUT_SLOT = 1;
+    private static final int INPUT_SLOT = 0;
+    private static final int ENERGY_ITEM_SLOT = 1;
     private static final int OUTPUT_SLOT = 2;
-    private static final int ENERGY_ITEM_SLOT = 3;
 
     private final ContainerData data;
     private int progress = 0;
@@ -81,37 +90,6 @@ public class CrystalInfuserBlockEntity extends BlockEntity implements MenuProvid
         };
     }
 
-    /*private boolean initBurn(ItemStack itemStack) {
-        ComponentItemHandler handler = new ComponentItemHandler(itemStack, JustDireDataComponents.ITEMSTACK_HANDLER.get(), 1);
-        ItemStack fuelStack = handler.getStackInSlot(0);
-
-        int burnTime = fuelStack.getBurnTime(RecipeType.SMELTING);
-        if (burnTime > 0) {
-            if (fuelStack.getItem() instanceof Coal_T1 direCoal) {
-                setFuelMultiplier(itemStack, direCoal.getBurnSpeedMultiplier());
-            } else if (fuelStack.getItem() instanceof BlockItem blockItem && blockItem.getBlock() instanceof CoalBlock_T1 coalBlock) {
-                setFuelMultiplier(itemStack, coalBlock.getBurnSpeedMultiplier());
-            } else if (fuelStack.getItem() instanceof FuelCanister) {
-                setFuelMultiplier(itemStack, FuelCanister.getBurnSpeedMultiplier(fuelStack));
-            } else {
-                setFuelMultiplier(itemStack, 1);
-            }
-            if (fuelStack.hasCraftingRemainingItem())
-                handler.setStackInSlot(0, fuelStack.getCraftingRemainingItem());
-            else {
-                fuelStack.shrink(1);
-                handler.setStackInSlot(0, fuelStack);
-            }
-
-
-            int counter = (int) (Math.floor(burnTime) / getBurnSpeedMultiplier(itemStack));
-            int maxBurn = counter;
-            itemStack.set(JustDireDataComponents.POCKETGEN_COUNTER, counter);
-            itemStack.set(JustDireDataComponents.POCKETGEN_MAXBURN, maxBurn);
-            return true;
-        }
-        return false;
-    }*/
     @Override
     public Component getDisplayName() {
         return Component.translatable("blockentity.powerplus.crystalinfuser");
@@ -150,16 +128,16 @@ public class CrystalInfuserBlockEntity extends BlockEntity implements MenuProvid
     }
 
     public void tick(Level level, BlockPos pPos, BlockState pState) {
-        if(hasRecipe() && isOutputSlotEmptyOrReceivable()) {
+        if(hasFuel() && hasRecipe() && isOutputSlotEmptyOrReceivable()) {
             increaseCraftingProgress();
             level.setBlockAndUpdate(pPos, pState.setValue(CrystalInfuser.LIT, true));
             setChanged(level, pPos, pState);
-
+    
             if (hasCraftingFinished()) {
                 craftItem();
                 resetProgress();
             }
-
+    
         } else {
             resetProgress();
             level.setBlockAndUpdate(pPos, pState.setValue(CrystalInfuser.LIT, false));
@@ -174,10 +152,15 @@ public class CrystalInfuserBlockEntity extends BlockEntity implements MenuProvid
     private void craftItem() {
         Optional<RecipeHolder<CrystalInfuserRecipe>> recipe = getCurrentRecipe();
         ItemStack output = recipe.get().value().output();
-
+    
         itemHandler.extractItem(INPUT_SLOT, 1, false);
         itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(output.getItem(),
                 itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + output.getCount()));
+    
+        // Consume 1 amethyst shard from ENERGY_ITEM_SLOT
+        if (!itemHandler.getStackInSlot(ENERGY_ITEM_SLOT).isEmpty()) {
+            itemHandler.extractItem(ENERGY_ITEM_SLOT, 1, false);
+        }
     }
 
     private boolean hasCraftingFinished() {
@@ -229,5 +212,13 @@ public class CrystalInfuserBlockEntity extends BlockEntity implements MenuProvid
     @Override
     public CompoundTag getUpdateTag(HolderLookup.Provider pRegistries) {
         return saveWithoutMetadata(pRegistries);
+    }
+    private boolean hasFuel() {
+        ItemStack fuelStack = itemHandler.getStackInSlot(ENERGY_ITEM_SLOT);
+        return !fuelStack.isEmpty() && isFuel(fuelStack);
+    }
+
+    private boolean isFuel(ItemStack stack) {
+        return stack.is(Items.AMETHYST_SHARD);
     }
 }

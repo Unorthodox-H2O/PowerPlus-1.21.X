@@ -1,0 +1,9 @@
+{
+  "type": "powerplus:grinding",
+  "ingredient": {
+    "item": "minecraft:raw_iron"
+  },
+  "result": {
+    "id": "powerplus:iron_dust"
+  }
+}

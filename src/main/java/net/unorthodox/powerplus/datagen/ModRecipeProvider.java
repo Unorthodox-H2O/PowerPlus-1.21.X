@@ -37,6 +37,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ModItems.RAW_TERBIUM);
         List<ItemLike> FORGED_SCRAP_SMELTABLES = List.of(ModItems.FORGED_SCRAP,
                 ModItems.FORGED_SCRAP_DUST);
+        List<ItemLike> IRON_DUST_SMELTABLES = List.of(Items.IRON_INGOT,
+                ModItems.IRON_DUST);
+        List<ItemLike> GOLD_DUST_SMELTABLES = List.of(Items.GOLD_INGOT,
+                ModItems.GOLD_DUST);
 
 
         //Shaped Recipes
@@ -175,6 +179,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreBlasting(pRecipeOutput, TERBIUM_SMELTABLES, MISC, ModItems.TERBIUM.get(), 0.25f, 100, "terbium");
         oreSmelting(pRecipeOutput, FORGED_SCRAP_SMELTABLES, MISC, ModItems.FORGED_SCRAP.get(), 0.25f, 200, "forged_scrap");
         oreBlasting(pRecipeOutput, FORGED_SCRAP_SMELTABLES, MISC, ModItems.FORGED_SCRAP.get(), 0.25f, 100, "forged_scrap");
+        oreSmelting(pRecipeOutput, IRON_DUST_SMELTABLES, MISC, Items.IRON_INGOT, 0.25f, 200, "iron_dust");
+        oreBlasting(pRecipeOutput, IRON_DUST_SMELTABLES, MISC, Items.IRON_INGOT, 0.25f, 100, "iron_dust");
+        oreSmelting(pRecipeOutput, GOLD_DUST_SMELTABLES, MISC, Items.GOLD_INGOT, 0.25f, 200, "gold_dust");
+        oreBlasting(pRecipeOutput, GOLD_DUST_SMELTABLES, MISC, Items.GOLD_INGOT, 0.25f, 100, "gold_dust");
+
+
+
     }
 
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

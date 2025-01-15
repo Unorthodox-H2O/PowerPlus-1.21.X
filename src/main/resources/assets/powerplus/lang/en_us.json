@@ -33,6 +33,7 @@
   "item.powerplus.forged_scrap_dust": "Forged Scrap Dust",
   "item.powerplus.forged_scrap": "Forged Scrap",
   "item.powerplus.iron_dust": "Iron Dust",
+  "item.powerplus.gold_dust": "Gold Dust",
 
   "item.powerplus.upgradeblank": "Blank Upgrade",
   "item.powerplus.advancedupgradeblank": "Advanced Blank Upgrade",
@@ -73,6 +74,7 @@
   "block.powerplus.creativesolidgenerator": "Creative Solid Generator",
 
   "blockentity.powerplus.crystalinfuser": "Crystal Infuser",
+  "blockentity.powerplus.grinder": "Coal Grinder",
 
   "tooltip.powerplus.upgradetier1.tooltip.shift": "Press §eShift§r for more Information!",
   "tooltip.powerplus.upgradetier1.tooltip.1": "This is the Upgrade Component of powerplus",

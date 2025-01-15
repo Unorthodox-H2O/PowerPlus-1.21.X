@@ -1,10 +1,12 @@
-// 1.21.1	2024-12-24T19:24:33.570447	Item Models: powerplus
+// 1.21.1	2025-01-08T15:44:37.1753258	Item Models: powerplus
 83345a9aa068c02e398b9988f3a1959ff8884216 assets/powerplus/models/item/advancedupgradeblank.json
 df98af94bc7f70d8febfbe6fa77b9730dd6f1b7c assets/powerplus/models/item/cerium.json
 0904d410aff6df1febbfcc96eba2c7b9db8a552c assets/powerplus/models/item/europium.json
 58b33cdcb450bc6b03f0e1ce104b7c45fa37f748 assets/powerplus/models/item/forged_scrap.json
 a2a6071eeea94b756a980f470b8aea378c751dd8 assets/powerplus/models/item/forged_scrap_dust.json
 3b5de1390a16fdf54567e309478d93e7d8ffb48e assets/powerplus/models/item/forged_scrap_ingot.json
+a5a3576ab0ab4d1a92905f8cdf43d9f4df7f1671 assets/powerplus/models/item/gold_dust.json
+69117b1c99929a7d1d44177b9867e28e476e05dd assets/powerplus/models/item/iron_dust.json
 3905fe482b998bb5bce78124d74c8c23fb3d81d2 assets/powerplus/models/item/raw_cerium.json
 deda1adcdaff304af7b5ca238fa2bb712d872094 assets/powerplus/models/item/raw_europium.json
 65d1c5533f28eb685a8fc3f85e5718c93bedbf06 assets/powerplus/models/item/raw_samarium.json

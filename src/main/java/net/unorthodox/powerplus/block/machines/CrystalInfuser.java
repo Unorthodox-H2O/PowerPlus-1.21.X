@@ -29,6 +29,7 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.unorthodox.powerplus.block.entity.ModBlockEntities;
 import net.unorthodox.powerplus.block.entity.machines.CrystalInfuserBlockEntity;
+import net.unorthodox.powerplus.item.ModItems;
 import org.jetbrains.annotations.Nullable;
 
 public class CrystalInfuser extends BaseEntityBlock {
@@ -47,6 +48,9 @@ public class CrystalInfuser extends BaseEntityBlock {
     @Override
     protected BlockState rotate(BlockState pState, Rotation pRotation) {
         return pState.setValue(FACING, pRotation.rotate(pState.getValue(FACING)));
+    }
+
+    public void rotate(BlockState pState, Level pLevel, BlockPos pPos, Rotation pRotation) {
     }
 
     @Override
@@ -88,13 +92,25 @@ public class CrystalInfuser extends BaseEntityBlock {
 
         super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
     }
-
+    
     @Override
     protected ItemInteractionResult useItemOn(ItemStack pStack, BlockState pState, Level pLevel, BlockPos pPos,
                                               Player pPlayer, InteractionHand pHand, BlockHitResult pHitResult) {
         if (!pLevel.isClientSide()) {
+            if (pStack.is(ModItems.WRENCH.get())) { // Assuming ModItems.WRENCH is the wrench item reference
+                if (pPlayer.isCrouching()) {
+                    // Drop itself and remove the block
+                    Block.popResource(pLevel, pPos, new ItemStack(this));
+                    pLevel.removeBlock(pPos, false);
+                    return ItemInteractionResult.SUCCESS;
+                }
+
+                pLevel.setBlockAndUpdate(pPos, pState.rotate(pLevel, pPos, Rotation.CLOCKWISE_90));
+                return ItemInteractionResult.SUCCESS;
+            }
+
             BlockEntity entity = pLevel.getBlockEntity(pPos);
-            if(entity instanceof CrystalInfuserBlockEntity crystalInfuserBlockEntity) {
+            if (entity instanceof CrystalInfuserBlockEntity crystalInfuserBlockEntity) {
                 ((ServerPlayer) pPlayer).openMenu(new SimpleMenuProvider(crystalInfuserBlockEntity, Component.literal("Crystal Infuser")), pPos);
             } else {
                 throw new IllegalStateException("Our Container provider is missing!");
@@ -114,6 +130,8 @@ public class CrystalInfuser extends BaseEntityBlock {
         return createTickerHelper(pBlockEntityType, ModBlockEntities.CRYSTAL_INFUSER_BE.get(),
                 (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));
     }
+
+
 
     /* LIT */
 

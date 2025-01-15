@@ -10,6 +10,7 @@ import net.unorthodox.powerplus.item.ModItems;
 import net.unorthodox.powerplus.recipe.ModRecipes;
 import net.unorthodox.powerplus.screen.ModMenuTypes;
 import net.unorthodox.powerplus.screen.machines.crystalinfuser.CrystalInfuserScreen;
+import net.unorthodox.powerplus.screen.machines.grinder.GrinderScreen;
 import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -103,6 +104,8 @@ public class PowerPlus {
         @SubscribeEvent
         public static void registerScreens(RegisterMenuScreensEvent event){
             event.register(ModMenuTypes.CRYSTALINFUSER_MENU.get(), CrystalInfuserScreen::new);
+            event.register(ModMenuTypes.GRINDER_MENU.get(), GrinderScreen::new);
+
         }
     }
 }

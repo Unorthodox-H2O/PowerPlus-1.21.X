@@ -1,5 +1,6 @@
 package net.unorthodox.powerplus.item;
 
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
@@ -25,6 +26,7 @@ public class ModItems {
     public static final DeferredItem<Item> FORGED_SCRAP_DUST = ITEMS.registerSimpleItem("forged_scrap_dust");
     public static final DeferredItem<Item> FORGED_SCRAP = ITEMS.registerSimpleItem("forged_scrap");
     public static final DeferredItem<Item> IRON_DUST = ITEMS.registerSimpleItem("iron_dust");
+    public static final DeferredItem<Item> GOLD_DUST = ITEMS.registerSimpleItem("gold_dust");
 
     //Benk Upgrades
     public static final DeferredItem<Item> UPGRADEBLANK = ITEMS.registerSimpleItem("upgradeblank");

@@ -110,6 +110,8 @@ public class ModBlocks {
 
         public static final DeferredBlock<Block> CRYSTALINFUSER = registerBlock("crystalinfuser",
                 () -> new CrystalInfuser(BlockBehaviour.Properties.of().noOcclusion().requiresCorrectToolForDrops()));
+        public static final DeferredBlock<Block> GRINDER = registerBlock("grinder",
+                () -> new Grinder(BlockBehaviour.Properties.of().noOcclusion().requiresCorrectToolForDrops()));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block){
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

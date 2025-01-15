@@ -10,6 +10,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.unorthodox.powerplus.PowerPlus;
 import net.unorthodox.powerplus.screen.machines.crystalinfuser.CrystalInfuserMenu;
+import net.unorthodox.powerplus.screen.machines.grinder.GrinderMenu;
 
 public class ModMenuTypes {
     public static final DeferredRegister<MenuType<?>> MENUS =
@@ -20,6 +21,9 @@ public class ModMenuTypes {
 
     public static final DeferredHolder<MenuType<?>, MenuType<CrystalInfuserMenu>> CRYSTALINFUSER_MENU =
             registerMenuType("crystal_infuser_menu", CrystalInfuserMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<GrinderMenu>> GRINDER_MENU =
+            registerMenuType("grinder_menu", GrinderMenu::new);
 
     private static <T extends AbstractContainerMenu> DeferredHolder<MenuType<?>, MenuType<T>> registerMenuType(String name,
                                                                                                                IContainerFactory<T> factory) {

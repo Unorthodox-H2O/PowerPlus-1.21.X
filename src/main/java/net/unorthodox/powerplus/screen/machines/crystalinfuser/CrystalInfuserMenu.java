@@ -30,10 +30,9 @@ public class CrystalInfuserMenu extends AbstractContainerMenu {
         addPlayerInventory(inv);
         addPlayerHotbar(inv);
 
-        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 0, 8, 62));
-        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 1, 54, 34));
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 0, 54, 23));
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 1, 54, 49));
         this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 2, 104, 34));
-        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 3, 152, 62));
 
         addDataSlots(data);
     }
@@ -74,7 +73,7 @@ public class CrystalInfuserMenu extends AbstractContainerMenu {
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
     // THIS YOU HAVE TO DEFINE!
-    private static final int TE_INVENTORY_SLOT_COUNT = 4;  // must be the number of slots you have!
+    private static final int TE_INVENTORY_SLOT_COUNT = 3;  // must be the number of slots you have!
     @Override
     public ItemStack quickMoveStack(Player playerIn, int pIndex) {
         Slot sourceSlot = slots.get(pIndex);

@@ -33,5 +33,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.FORGED_SCRAP_INGOT.get());
         basicItem(ModItems.FORGED_SCRAP_DUST.get());
         basicItem(ModItems.FORGED_SCRAP.get());
+        basicItem(ModItems.IRON_DUST.get());
+        basicItem(ModItems.GOLD_DUST.get());
+
     }
 }

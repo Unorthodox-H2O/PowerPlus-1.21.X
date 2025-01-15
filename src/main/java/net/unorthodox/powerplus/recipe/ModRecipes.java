@@ -24,6 +24,15 @@ public class ModRecipes {
                     return "crystal_infusing";
                     }
                 });
+    public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<GrinderRecipe>> GRINDER_SERIALIZER =
+            SERIALIZERS.register("grinding", GrinderRecipe.Serializer::new);
+    public static final DeferredHolder<RecipeType<?>, RecipeType<GrinderRecipe>> GRINDER_TYPE =
+            TYPES.register("grinding", () -> new RecipeType<GrinderRecipe>() {
+                @Override
+                public String toString() {
+                    return "grinding";
+                    }
+                });
 
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);

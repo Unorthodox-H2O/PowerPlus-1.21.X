@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-31T15:45:32.4831304	Loot Tables
+// 1.21.1	2025-01-08T15:36:45.8407709	Loot Tables
 cc6847faa055c83bab565269c33ae8ef77e7570a data/powerplus/loot_table/blocks/advancedliquidgenerator.json
 58fa6a48b56023c05ce2fdd730c59964d6809f1f data/powerplus/loot_table/blocks/advancedsolidgenerator.json
 bafcc5e0e44863adeee500c580fb23049d969a72 data/powerplus/loot_table/blocks/advancedthermogenerator.json
@@ -23,6 +23,7 @@ cc476dd094d985aa1e41fb1e4f26e5286c7d004b data/powerplus/loot_table/blocks/elitel
 3a1d84c2ee122dd582b8a22584f609ccfec9abaa data/powerplus/loot_table/blocks/elite_casing.json
 0c8a583feaf7fb39b0b9a80863fb84dd319fda7a data/powerplus/loot_table/blocks/europium_benk.json
 581e03636c99336176e0d07471cb24e73587592b data/powerplus/loot_table/blocks/europium_block.json
+cc8ae6737a64e4c6a05020e940198f1066ebc31f data/powerplus/loot_table/blocks/grinder.json
 4dbfa9b53b880bef6a96970c525106a16f5a76ac data/powerplus/loot_table/blocks/legendaryliquidgenerator.json
 e21e94151743a1161b7c44c62f354705a52658a5 data/powerplus/loot_table/blocks/legendarysolidgenerator.json
 3308855577531753ffa73c6e49ec57e21cccee21 data/powerplus/loot_table/blocks/legendarythermogenerator.json

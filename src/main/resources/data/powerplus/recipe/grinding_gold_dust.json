@@ -1,0 +1,9 @@
+{
+  "type": "powerplus:grinding",
+  "ingredient": {
+    "item": "minecraft:raw_gold"
+  },
+  "result": {
+    "id": "powerplus:gold_dust"
+  }
+}

@@ -27,8 +27,8 @@ public class CrystalInfuserScreen extends AbstractContainerScreen<CrystalInfuser
 
         this.inventoryLabelY = 73;
         this.titleLabelY = 4;
-        this.inventoryLabelX = 27;
-        this.titleLabelX = 27;
+        this.inventoryLabelX = 8;
+        this.titleLabelX = 8;
 
     }
 

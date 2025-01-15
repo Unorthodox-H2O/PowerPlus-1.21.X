@@ -36,7 +36,7 @@ public class ModCreativeModeTabs {
                 pOutput.accept(ModItems.FORGED_SCRAP_DUST);
                 pOutput.accept(ModItems.FORGED_SCRAP);
                 pOutput.accept(ModItems.IRON_DUST);
-
+                pOutput.accept(ModItems.GOLD_DUST);
 
                 //Upgrades
                 pOutput.accept(ModItems.UPGRADEBLANK);
@@ -48,7 +48,7 @@ public class ModCreativeModeTabs {
                 pOutput.accept(ModItems.UPGRADETIER5);
 
                 //Wrench
-                //pOutput.accept(ModItems.WRENCH);
+                pOutput.accept(ModItems.WRENCH);
 
             }).build());
     public static final Supplier<CreativeModeTab> POWERPLUS_BLOCK_TAB = CREATIVE_MODE_TAB.register("powerplus_block_tab", () -> CreativeModeTab.builder()
@@ -81,6 +81,7 @@ public class ModCreativeModeTabs {
 
                 //Machines
                 pOutput.accept(ModBlocks.CRYSTALINFUSER);
+                pOutput.accept(ModBlocks.GRINDER);
 
                 //Generators
                 pOutput.accept(ModBlocks.BASICTHERMOGENERATOR);

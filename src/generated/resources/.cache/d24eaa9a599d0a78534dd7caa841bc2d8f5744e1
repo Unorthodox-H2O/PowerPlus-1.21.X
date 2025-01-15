@@ -1,4 +1,7 @@
-// 1.21.1	2024-12-24T19:24:33.5394395	Power Plus Item Tags
+// 1.21.1	2025-01-12T12:09:23.088859	Power Plus Item Tags
+2d93f52849c1597b72a9475ae06b71c5d44783cb data/forge/tags/item/dusts.json
+007d03d275cea5b8bc3ba2d83da9372fa01f6391 data/forge/tags/item/ingots.json
+6306d598b3e84aeb0108d0601e5b18ff8c52ba72 data/forge/tags/item/wrenches.json
 5db69586b6c50b2befacf44de1aedc4a5af092fe data/powerplus/tags/item/benk_activation_tier_1.json
 6222fd0d7d2ce08ee1f70be68a61f4e167dda650 data/powerplus/tags/item/transformable_tier1_items.json
 736f4ef35696340b932cdb679c5a32e7b28db783 data/powerplus/tags/item/transformable_tier2_items.json
