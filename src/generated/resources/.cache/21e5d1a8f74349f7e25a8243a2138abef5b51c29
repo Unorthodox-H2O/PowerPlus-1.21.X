@@ -1,5 +1,6 @@
-// 1.21.1	2025-01-12T12:25:20.0460067	Tags for minecraft:block mod id powerplus
+// 1.21.1	2025-01-21T00:04:39.1827281	Tags for minecraft:block mod id powerplus
 daea68a38b5ca04c99572960fe4b2caba1995465 data/forge/tags/block/wrenches.json
-1728d8c2e570c8fe9a7d50a062efe61ac257b552 data/minecraft/tags/block/mineable/pickaxe.json
-554339e120757021e26bd6a5c5538cdc4971f8a8 data/minecraft/tags/block/needs_diamond_tool.json
-473f49948f68d042161e21d9db5e418c53f5fab4 data/minecraft/tags/block/needs_iron_tool.json
+bae0c9223cce731b7d37f714d102c012dd1b7899 data/minecraft/tags/block/mineable/pickaxe.json
+232a46fec7b037953bf1685fb20148db25b0d3d7 data/minecraft/tags/block/needs_diamond_tool.json
+f19ca5bceb12b6002fd8535ff19f8d11e142315d data/minecraft/tags/block/needs_iron_tool.json
+5cf101b8b9d9a20c350ac34eec9229f5f0594bed data/minecraft/tags/block/needs_stone_tool.json

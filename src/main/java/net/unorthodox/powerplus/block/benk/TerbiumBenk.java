@@ -15,27 +15,17 @@ import net.unorthodox.powerplus.item.ModItems;
 
 import java.util.List;
 
-
-
 public class TerbiumBenk extends CeriumBenk {
     public TerbiumBenk(Properties properties) {
         super(properties);
+
+        this.useTier1 = true;
+        this.useTier2 = false;
+        this.useTier3 = false;
+        this.useTier4 = false;
+        this.useTier5 = false;
+
     }
-
-
-    @Override
-    public void stepOn(Level level, BlockPos pos, BlockState state, Entity pEntity) {
-        if(pEntity instanceof ItemEntity itemEntity) {
-            if(isValidItem5(itemEntity.getItem())) {
-                itemEntity.setItem(new ItemStack(ModItems.RAW_TERBIUM.get(), itemEntity.getItem().getCount()));
-            }
-        }
-
-        super.stepOn(level, pos, state, pEntity);
-    }
-
-    private boolean isValidItem5(ItemStack item) {return item.getItem() == Items.NETHERITE_BLOCK.asItem();}
-
     @Override
     public void appendHoverText(ItemStack pStack, Item.TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
         if(Screen.hasShiftDown()){

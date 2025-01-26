@@ -1,6 +1,5 @@
 package net.unorthodox.powerplus.api.base;
 
-import net.unorthodox.powerplus.api.base.Use;
 import net.minecraft.core.Direction;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;

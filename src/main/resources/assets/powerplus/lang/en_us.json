@@ -18,6 +18,7 @@
   "block.powerplus.cerium_benk": "Cerium Benk",
   "block.powerplus.terbium_benk": "Terbium Benk",
 
+  "block.powerplus.charcoalblock": "Block of Charcoal",
 
   "item.powerplus.cerium": "Cerium Ingot",
   "item.powerplus.raw_cerium": "Raw Cerium",
@@ -32,6 +33,7 @@
   "item.powerplus.forged_scrap_ingot": "Forged Scrap Ingot",
   "item.powerplus.forged_scrap_dust": "Forged Scrap Dust",
   "item.powerplus.forged_scrap": "Forged Scrap",
+  "item.powerplus.copper_dust": "Copper Dust",
   "item.powerplus.iron_dust": "Iron Dust",
   "item.powerplus.gold_dust": "Gold Dust",
 
@@ -42,6 +44,18 @@
   "item.powerplus.upgradetier3": "Tier 3 Upgrade",
   "item.powerplus.upgradetier4": "Tier 4 Upgrade",
   "item.powerplus.upgradetier5": "Tier 5 Upgrade",
+
+  "item.powerplus.cindercoal": "Cinder Coal",
+  "item.powerplus.smolderstone": "Smolder Stone",
+  "item.powerplus.charcite": "Charcite",
+  "item.powerplus.vexcoal": "Vex Coal",
+  "item.powerplus.infernite": "Infernite",
+
+  "item.powerplus.blightice": "Blight Ice",
+  "item.powerplus.emberfrost": "Emberfrost",
+  "item.powerplus.cryoflame": "Cryoflame",
+  "item.powerplus.glacialember": "Glacial Ember",
+  "item.powerplus.blazefrost": "Blazefrost",
 
 
   "item.powerplus.wrench": "Wrench",

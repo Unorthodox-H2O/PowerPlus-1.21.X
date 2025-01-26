@@ -8,6 +8,7 @@ import net.unorthodox.powerplus.PowerPlus;
 import net.unorthodox.powerplus.block.ModBlocks;
 import net.unorthodox.powerplus.block.entity.machines.CrystalInfuserBlockEntity;
 import net.unorthodox.powerplus.block.entity.machines.GrinderBlockEntity;
+import net.unorthodox.powerplus.block.entity.thermo.BasicThermoGeneratorBE;
 
 import java.util.function.Supplier;
 
@@ -21,7 +22,9 @@ public class ModBlockEntities {
     public static final Supplier<BlockEntityType<GrinderBlockEntity>> GRINDER_BE =
             BLOCK_ENTITIES.register("grinder_be", () -> BlockEntityType.Builder.of(
                     GrinderBlockEntity::new, ModBlocks.GRINDER.get()).build(null));
-
+    public static final Supplier<BlockEntityType<BasicThermoGeneratorBE>> BASICTHERMOGENERATOR_BE =
+            BLOCK_ENTITIES.register("basicthermogenerator_be", () -> BlockEntityType.Builder.of(
+                    BasicThermoGeneratorBE::new, ModBlocks.BASICTHERMOGENERATOR.get()).build(null));
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

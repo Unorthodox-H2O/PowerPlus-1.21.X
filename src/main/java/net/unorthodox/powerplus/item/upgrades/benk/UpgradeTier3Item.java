@@ -13,7 +13,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.unorthodox.powerplus.block.ModBlocks;
 
-
 import java.util.List;
 import java.util.Map;
 

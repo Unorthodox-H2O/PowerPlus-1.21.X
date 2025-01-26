@@ -1,21 +1,20 @@
 package net.unorthodox.powerplus.datagen;
 
-import net.minecraft.world.item.Items;
-import net.neoforged.fml.common.Mod;
-import net.unorthodox.powerplus.PowerPlus;
-import net.unorthodox.powerplus.block.ModBlocks;
-import net.unorthodox.powerplus.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
+import net.unorthodox.powerplus.PowerPlus;
+import net.unorthodox.powerplus.block.ModBlocks;
+import net.unorthodox.powerplus.item.ModItems;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-import static net.minecraft.data.recipes.RecipeCategory.*;
+import static net.minecraft.data.recipes.RecipeCategory.MISC;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
     public ModRecipeProvider(PackOutput pOutput, CompletableFuture<HolderLookup.Provider> pRegistries) {
@@ -37,6 +36,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ModItems.RAW_TERBIUM);
         List<ItemLike> FORGED_SCRAP_SMELTABLES = List.of(ModItems.FORGED_SCRAP,
                 ModItems.FORGED_SCRAP_DUST);
+        List<ItemLike> COPPER_DUST_SMELTABLES = List.of(Items.COPPER_INGOT,
+                ModItems.COPPER_DUST);
         List<ItemLike> IRON_DUST_SMELTABLES = List.of(Items.IRON_INGOT,
                 ModItems.IRON_DUST);
         List<ItemLike> GOLD_DUST_SMELTABLES = List.of(Items.GOLD_INGOT,
@@ -148,6 +149,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('D', Items.DIAMOND_BLOCK)
                 .unlockedBy("has_upgradetier5", has(ModItems.UPGRADETIER5.get())).save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CHARCOALBLOCK.get().asItem())
+                .pattern("CCC")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', Items.CHARCOAL)
+                .unlockedBy("has_charcoalblock", has(ModBlocks.CHARCOALBLOCK.get())).save(pRecipeOutput);
+
         // Shapeless Recipes
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SCANDIUM.get(), 9)
                 .requires(ModBlocks.SCANDIUM_BLOCK.get())
@@ -164,6 +172,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TERBIUM.get(), 9)
                 .requires(ModBlocks.TERBIUM_BLOCK.get())
                 .unlockedBy("has_terbium_block", has(ModBlocks.TERBIUM_BLOCK.get())).save(pRecipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.CHARCOAL, 9)
+                .requires(ModBlocks.CHARCOALBLOCK.get())
+                .unlockedBy("has_charcoalblock", has(ModBlocks.CHARCOALBLOCK.get())).save(pRecipeOutput);
 
 
 
@@ -179,6 +190,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreBlasting(pRecipeOutput, TERBIUM_SMELTABLES, MISC, ModItems.TERBIUM.get(), 0.25f, 100, "terbium");
         oreSmelting(pRecipeOutput, FORGED_SCRAP_SMELTABLES, MISC, ModItems.FORGED_SCRAP.get(), 0.25f, 200, "forged_scrap");
         oreBlasting(pRecipeOutput, FORGED_SCRAP_SMELTABLES, MISC, ModItems.FORGED_SCRAP.get(), 0.25f, 100, "forged_scrap");
+        oreSmelting(pRecipeOutput, COPPER_DUST_SMELTABLES, MISC, Items.COPPER_INGOT, 0.25f, 200, "copper_dust");
+        oreBlasting(pRecipeOutput, COPPER_DUST_SMELTABLES, MISC, Items.COPPER_INGOT, 0.25f, 100, "copper_dust");
         oreSmelting(pRecipeOutput, IRON_DUST_SMELTABLES, MISC, Items.IRON_INGOT, 0.25f, 200, "iron_dust");
         oreBlasting(pRecipeOutput, IRON_DUST_SMELTABLES, MISC, Items.IRON_INGOT, 0.25f, 100, "iron_dust");
         oreSmelting(pRecipeOutput, GOLD_DUST_SMELTABLES, MISC, Items.GOLD_INGOT, 0.25f, 200, "gold_dust");

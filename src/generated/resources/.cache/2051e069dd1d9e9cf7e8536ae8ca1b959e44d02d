@@ -1,11 +1,20 @@
-// 1.21.1	2025-01-08T15:44:37.1753258	Item Models: powerplus
+// 1.21.1	2025-01-19T21:26:52.7079998	Item Models: powerplus
 83345a9aa068c02e398b9988f3a1959ff8884216 assets/powerplus/models/item/advancedupgradeblank.json
+245343814b3a94d453f4830b335ab8950be35acb assets/powerplus/models/item/blazefrost.json
+d0bccc7ed38de8453c31ad7e4166f4da57b24c2f assets/powerplus/models/item/blightice.json
 df98af94bc7f70d8febfbe6fa77b9730dd6f1b7c assets/powerplus/models/item/cerium.json
+ab6b13b9e2779d68772b64c06fc8f196bd284b15 assets/powerplus/models/item/charcite.json
+9a409aab2c193881dfee89dcb173d05e8088814b assets/powerplus/models/item/cindercoal.json
+863294d27cfe2c5764d1731b7d56e2581a74f2b1 assets/powerplus/models/item/copper_dust.json
+6095e3de413e514eede3681115f7ebc2770d2161 assets/powerplus/models/item/cryoflame.json
+506b045d30a22268dbcf01545a03470519e98b5f assets/powerplus/models/item/emberfrost.json
 0904d410aff6df1febbfcc96eba2c7b9db8a552c assets/powerplus/models/item/europium.json
 58b33cdcb450bc6b03f0e1ce104b7c45fa37f748 assets/powerplus/models/item/forged_scrap.json
 a2a6071eeea94b756a980f470b8aea378c751dd8 assets/powerplus/models/item/forged_scrap_dust.json
 3b5de1390a16fdf54567e309478d93e7d8ffb48e assets/powerplus/models/item/forged_scrap_ingot.json
+4ffad368c70a38bbb20b3c17b414f5fc83737027 assets/powerplus/models/item/glacialember.json
 a5a3576ab0ab4d1a92905f8cdf43d9f4df7f1671 assets/powerplus/models/item/gold_dust.json
+f3c0fc685cef5b5b8d0370a18d82d75bdfff9ed1 assets/powerplus/models/item/infernite.json
 69117b1c99929a7d1d44177b9867e28e476e05dd assets/powerplus/models/item/iron_dust.json
 3905fe482b998bb5bce78124d74c8c23fb3d81d2 assets/powerplus/models/item/raw_cerium.json
 deda1adcdaff304af7b5ca238fa2bb712d872094 assets/powerplus/models/item/raw_europium.json
@@ -14,6 +23,7 @@ deda1adcdaff304af7b5ca238fa2bb712d872094 assets/powerplus/models/item/raw_europi
 3791822ba38479352b85a61939da79e6d0c4a8c4 assets/powerplus/models/item/raw_terbium.json
 ce7a1e7ff6eda15a226cefd514bdae65a8acec86 assets/powerplus/models/item/samarium.json
 bf2d63e5e39d96303a337ce5cbb57a73a7fb65c2 assets/powerplus/models/item/scandium.json
+ce1a5f493a3d3ad932f790d7ad8b26dccbb61de9 assets/powerplus/models/item/smolderstone.json
 54a726e74a0da7dbd165caa455b5e85635c8f5d3 assets/powerplus/models/item/terbium.json
 aa8476d5a73e529a6393875b3ee25d272c3b75a0 assets/powerplus/models/item/upgradeblank.json
 11c329faef9a308ed87b438f0f484713bf06b0c5 assets/powerplus/models/item/upgradetier1.json
@@ -21,3 +31,4 @@ aa8476d5a73e529a6393875b3ee25d272c3b75a0 assets/powerplus/models/item/upgradebla
 d056257b090400c20a74b249961770996e015cfe assets/powerplus/models/item/upgradetier3.json
 0f9520fa9289fc7a1a14e670b54e1438829313d4 assets/powerplus/models/item/upgradetier4.json
 84009e913d1c0ac8151244ee8be3e06b0ae07365 assets/powerplus/models/item/upgradetier5.json
+89465b23db4683c293043ed26717024be78d5149 assets/powerplus/models/item/vexcoal.json

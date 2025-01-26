@@ -12,29 +12,20 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.unorthodox.powerplus.item.ModItems;
+
 import java.util.List;
 
 public class EuropiumBenk extends SamariumBenk {
-    public EuropiumBenk(Properties properties) {
+    public EuropiumBenk(Properties properties){
         super(properties);
-    }
 
+        this.useTier1 = true;
+        this.useTier2 = false;
+        this.useTier3 = false;
+        this.useTier4 = false;
+        this.useTier5 = false;
 
-    @Override
-    public void stepOn(Level level, BlockPos pos, BlockState state, Entity pEntity) {
-       if(pEntity instanceof ItemEntity itemEntity) {
-           if(isValidItem1(itemEntity.getItem())) {
-               itemEntity.setItem(new ItemStack(ModItems.RAW_EUROPIUM.get(), itemEntity.getItem().getCount()));
-           }
-       }
-
-        super.stepOn(level, pos, state, pEntity);
-    }
-
-    private boolean isValidItem1(ItemStack item) {
-        return item.getItem() == Items.GOLD_BLOCK.asItem();
-    }
-
+}
 
     @Override
     public void appendHoverText(ItemStack pStack, Item.TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {

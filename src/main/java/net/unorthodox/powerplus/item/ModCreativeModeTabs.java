@@ -5,7 +5,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.unorthodox.powerplus.PowerPlus;
@@ -35,6 +34,7 @@ public class ModCreativeModeTabs {
                 pOutput.accept(ModItems.FORGED_SCRAP_INGOT);
                 pOutput.accept(ModItems.FORGED_SCRAP_DUST);
                 pOutput.accept(ModItems.FORGED_SCRAP);
+                pOutput.accept(ModItems.COPPER_DUST);
                 pOutput.accept(ModItems.IRON_DUST);
                 pOutput.accept(ModItems.GOLD_DUST);
 
@@ -46,6 +46,18 @@ public class ModCreativeModeTabs {
                 pOutput.accept(ModItems.UPGRADETIER3);
                 pOutput.accept(ModItems.UPGRADETIER4);
                 pOutput.accept(ModItems.UPGRADETIER5);
+
+                //fuels
+                pOutput.accept(ModItems.CINDERCOAL);
+                pOutput.accept(ModItems.SMOLDERSTONE);
+                pOutput.accept(ModItems.CHARCITE);
+                pOutput.accept(ModItems.VEXCOAL);
+                pOutput.accept(ModItems.INFERNITE);
+                pOutput.accept(ModItems.BLIGHTICE);
+                pOutput.accept(ModItems.EMBERFROST);
+                pOutput.accept(ModItems.CRYOFLAME);
+                pOutput.accept(ModItems.GLACIALEMBER);
+                pOutput.accept(ModItems.BLAZEFROST);
 
                 //Wrench
                 pOutput.accept(ModItems.WRENCH);
@@ -110,6 +122,10 @@ public class ModCreativeModeTabs {
                 pOutput.accept(ModBlocks.ASCENDANTSOLIDGENERATOR);
                 pOutput.accept(ModBlocks.RADIANTSOLIDGENERATOR);
                 pOutput.accept(ModBlocks.CREATIVESOLIDGENERATOR);
+
+                // -- Fuels
+                pOutput.accept(ModBlocks.CHARCOALBLOCK);
+
 
             }).build());
 

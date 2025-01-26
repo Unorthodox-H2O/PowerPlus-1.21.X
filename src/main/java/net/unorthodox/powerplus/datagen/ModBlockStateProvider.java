@@ -29,11 +29,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.ASCENDANT_CASING);
         blockWithItem(ModBlocks.RADIANT_CASING);
 
+        blockWithItem(ModBlocks.CHARCOALBLOCK);
+
         blockWithItem(ModBlocks.SCANDIUM_BENK);
         blockWithItem(ModBlocks.SAMARIUM_BENK);
         blockWithItem(ModBlocks.EUROPIUM_BENK);
         blockWithItem(ModBlocks.CERIUM_BENK);
         blockWithItem(ModBlocks.TERBIUM_BENK);
+
+        blockWithItem(ModBlocks.BASICCELL);
+        blockWithItem(ModBlocks.ADVANCEDCELL);
+        blockWithItem(ModBlocks.ELITECELL);
+        blockWithItem(ModBlocks.SUPERIORCELL);
+        blockWithItem(ModBlocks.LEGENDARYCELL);
+        blockWithItem(ModBlocks.ASCENDANTCELL);
+        blockWithItem(ModBlocks.CREATIVECELL);
 
     }
 

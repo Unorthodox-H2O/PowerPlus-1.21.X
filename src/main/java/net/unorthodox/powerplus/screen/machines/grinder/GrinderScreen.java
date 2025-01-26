@@ -8,8 +8,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.unorthodox.powerplus.PowerPlus;
-import net.unorthodox.powerplus.block.machines.Grinder;
-import net.unorthodox.powerplus.screen.machines.crystalinfuser.CrystalInfuserMenu;
 
 public class GrinderScreen extends AbstractContainerScreen<GrinderMenu> {
     public static final ResourceLocation GUI_TEXTURE =

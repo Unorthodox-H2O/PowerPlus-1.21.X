@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-08T15:36:45.8407709	Loot Tables
+// 1.21.1	2025-01-21T00:04:39.1290555	Loot Tables
 cc6847faa055c83bab565269c33ae8ef77e7570a data/powerplus/loot_table/blocks/advancedliquidgenerator.json
 58fa6a48b56023c05ce2fdd730c59964d6809f1f data/powerplus/loot_table/blocks/advancedsolidgenerator.json
 bafcc5e0e44863adeee500c580fb23049d969a72 data/powerplus/loot_table/blocks/advancedthermogenerator.json
@@ -13,6 +13,7 @@ af997ad2ff0c0edfe522cdefae57a16c58e4c984 data/powerplus/loot_table/blocks/basict
 eba68312b85c19dc7498112331729d923cd829c2 data/powerplus/loot_table/blocks/basic_casing.json
 7ec1798eb4c27059c1ae3902d9cd5a7054c2e44a data/powerplus/loot_table/blocks/cerium_benk.json
 c1596be7b4a5c5e0bb776bb38a824d9bb71602a2 data/powerplus/loot_table/blocks/cerium_block.json
+c92764780e6ab0b04bb5e5d289da28b10e39c5ae data/powerplus/loot_table/blocks/charcoalblock.json
 fb7d5fe06e0a60783202c9fac4c812608edfdba0 data/powerplus/loot_table/blocks/creativeliquidgenerator.json
 9df605cd86ad44b53ad78767106533a4bb13cff7 data/powerplus/loot_table/blocks/creativesolidgenerator.json
 1f33775a4eb9fe45e6073f377d86d19cdec9f0c6 data/powerplus/loot_table/blocks/creativethermogenerator.json

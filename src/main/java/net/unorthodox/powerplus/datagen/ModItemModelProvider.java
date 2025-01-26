@@ -33,8 +33,19 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.FORGED_SCRAP_INGOT.get());
         basicItem(ModItems.FORGED_SCRAP_DUST.get());
         basicItem(ModItems.FORGED_SCRAP.get());
+        basicItem(ModItems.COPPER_DUST.get());
         basicItem(ModItems.IRON_DUST.get());
         basicItem(ModItems.GOLD_DUST.get());
+        basicItem(ModItems.CINDERCOAL.get());
+        basicItem(ModItems.SMOLDERSTONE.get());
+        basicItem(ModItems.CHARCITE.get());
+        basicItem(ModItems.VEXCOAL.get());
+        basicItem(ModItems.INFERNITE.get());
+        basicItem(ModItems.BLIGHTICE.get());
+        basicItem(ModItems.EMBERFROST.get());
+        basicItem(ModItems.CRYOFLAME.get());
+        basicItem(ModItems.GLACIALEMBER.get());
+        basicItem(ModItems.BLAZEFROST.get());
 
     }
 }

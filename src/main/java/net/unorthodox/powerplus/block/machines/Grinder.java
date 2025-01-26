@@ -16,6 +16,7 @@ import net.minecraft.world.SimpleMenuProvider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -27,6 +28,8 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import net.unorthodox.powerplus.block.entity.ModBlockEntities;
 import net.unorthodox.powerplus.block.entity.machines.GrinderBlockEntity;
 import net.unorthodox.powerplus.item.ModItems;
@@ -39,11 +42,19 @@ public class Grinder extends BaseEntityBlock {
 
     public Grinder(Properties pProperties) {
         super (pProperties);
+        
+        
     }
     @Override
     protected MapCodec<? extends BaseEntityBlock> codec() {
         return CODEC;
     }
+    
+    @Override
+    public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
+        return Block.box(2.0D, 0.0D, 2.0D, 14.0D, 10.0D, 14.0D); // Example dimensions for hitbox
+    }
+
     /* FACING */
     @Override
     protected BlockState rotate(BlockState pState, Rotation pRotation) {

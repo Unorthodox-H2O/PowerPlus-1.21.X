@@ -6,7 +6,6 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ItemParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
@@ -69,7 +68,6 @@ public class CrystalInfuser extends BaseEntityBlock {
         pBuilder.add(FACING, LIT);
     }
 
-
     /* BLOCK ENTITY */
 
     @Override
@@ -104,14 +102,13 @@ public class CrystalInfuser extends BaseEntityBlock {
                     pLevel.removeBlock(pPos, false);
                     return ItemInteractionResult.SUCCESS;
                 }
-
                 pLevel.setBlockAndUpdate(pPos, pState.rotate(pLevel, pPos, Rotation.CLOCKWISE_90));
                 return ItemInteractionResult.SUCCESS;
             }
 
             BlockEntity entity = pLevel.getBlockEntity(pPos);
             if (entity instanceof CrystalInfuserBlockEntity crystalInfuserBlockEntity) {
-                ((ServerPlayer) pPlayer).openMenu(new SimpleMenuProvider(crystalInfuserBlockEntity, Component.literal("Crystal Infuser")), pPos);
+                pPlayer.openMenu(new SimpleMenuProvider(crystalInfuserBlockEntity, Component.literal("Crystal Infuser")), pPos);
             } else {
                 throw new IllegalStateException("Our Container provider is missing!");
             }

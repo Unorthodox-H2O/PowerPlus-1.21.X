@@ -34,8 +34,6 @@ public class ModTags {
         public static final TagKey<Item> BENK_ACTIVE_TIER_4 = createTag("benk_active_tier_4");
         public static final TagKey<Item> BENK_ACTIVE_TIER_5 = createTag("benk_active_tier_5");
 
-//        public static final TagKey<Item> WRENCHES = createTag("wrenches");
-
     }
 
         private static final TagKey<Item> createTag(String name) {

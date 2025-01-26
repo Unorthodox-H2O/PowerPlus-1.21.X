@@ -13,7 +13,6 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.neoforged.neoforge.items.ItemStackHandler;
 import net.unorthodox.powerplus.util.AreaAffectingData;
 import net.unorthodox.powerplus.util.RedstoneControlData;
 
@@ -140,11 +139,9 @@ public class BaseMachineBE extends BlockEntity {
         if (this instanceof AreaAffectingBE areaAffectingBE && !areaAffectingBE.getAreaAffectingData().equals(getDefaultAreaData(areaAffectingBE)))
             return false;
 
-        if (this instanceof PoweredMachineBE poweredMachineBE && poweredMachineBE.getEnergyStored() > 0)
-            return false;
+        return !(this instanceof PoweredMachineBE poweredMachineBE) || poweredMachineBE.getEnergyStored() <= 0;
        // if (this instanceof RedstoneControlledBE redstoneControlledBE && !redstoneControlledBE.getRedstoneControlData().equals(getDefaultRedstoneData()))
          //   return false;
-        return true;
     }
 
     @Override

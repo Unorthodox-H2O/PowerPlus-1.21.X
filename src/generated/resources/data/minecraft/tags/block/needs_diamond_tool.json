@@ -2,6 +2,9 @@
   "values": [
     "powerplus:europium_block",
     "powerplus:cerium_block",
-    "powerplus:terbium_block"
+    "powerplus:terbium_block",
+    "powerplus:europium_benk",
+    "powerplus:cerium_benk",
+    "powerplus:terbium_benk"
   ]
 }

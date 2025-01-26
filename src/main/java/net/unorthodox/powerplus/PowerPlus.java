@@ -1,19 +1,8 @@
 package net.unorthodox.powerplus;
 
-import net.minecraft.world.item.CreativeModeTabs;
-import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
-import net.neoforged.neoforge.registries.datamaps.RegisterDataMapTypesEvent;
-import net.unorthodox.powerplus.block.ModBlocks;
-import net.unorthodox.powerplus.block.entity.ModBlockEntities;
-import net.unorthodox.powerplus.item.ModCreativeModeTabs;
-import net.unorthodox.powerplus.item.ModItems;
-import net.unorthodox.powerplus.recipe.ModRecipes;
-import net.unorthodox.powerplus.screen.ModMenuTypes;
-import net.unorthodox.powerplus.screen.machines.crystalinfuser.CrystalInfuserScreen;
-import net.unorthodox.powerplus.screen.machines.grinder.GrinderScreen;
-import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -24,9 +13,21 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import net.neoforged.neoforge.registries.datamaps.RegisterDataMapTypesEvent;
+import net.unorthodox.powerplus.block.ModBlocks;
+import net.unorthodox.powerplus.block.entity.ModBlockEntities;
+import net.unorthodox.powerplus.item.ModCreativeModeTabs;
+import net.unorthodox.powerplus.item.ModItems;
+import net.unorthodox.powerplus.recipe.ModRecipes;
+import net.unorthodox.powerplus.screen.ModMenuTypes;
+import net.unorthodox.powerplus.screen.machines.crystalinfuser.CrystalInfuserScreen;
+import net.unorthodox.powerplus.screen.machines.grinder.GrinderScreen;
+import net.unorthodox.powerplus.util.FuelRegistry;
+import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(PowerPlus.MOD_ID)
@@ -54,6 +55,7 @@ public class PowerPlus {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+
         // Register the non to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -75,6 +77,9 @@ public class PowerPlus {
         LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber);
 
         Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
+
+        // register fuels
+        FuelRegistry.registerFuels();
     }
 
     // Add the example block non to the building blocks tab
@@ -105,7 +110,7 @@ public class PowerPlus {
         public static void registerScreens(RegisterMenuScreensEvent event){
             event.register(ModMenuTypes.CRYSTALINFUSER_MENU.get(), CrystalInfuserScreen::new);
             event.register(ModMenuTypes.GRINDER_MENU.get(), GrinderScreen::new);
-
         }
     }
+
 }

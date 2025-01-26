@@ -1,103 +1,95 @@
 package net.unorthodox.powerplus.block.entity.thermo;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
+import net.unorthodox.powerplus.block.entity.ModBlockEntities;
+import net.unorthodox.powerplus.config.IGenerator;
 import net.unorthodox.powerplus.lib.EnergyStorage;
 
-public class BasicThermoGeneratorBE extends BlockEntity implements IThermoGeneratorBE {
-    private final EnergyStorage energyStorage = new EnergyStorage();
+import java.util.HashMap;
+import java.util.Map;
+
+public class BasicThermoGeneratorBE extends BlockEntity implements IGenerator {
 
     // Constants
-    private static final int MAX_ENERGY_CAPACITY = 40_000_000;
-    private static final float LAVA_MULTIPLIER = 20.0f;
-    private static final float COAL_MULTIPLIER = 1.5f;
-    private static final Block LAVA_BLOCK = Blocks.LAVA;
-    private static final Block COAL_BLOCK = Blocks.COAL_BLOCK;
+    private static final int MAX_ENERGY_CAPACITY = 10_000;
+    private static final int MAX_TRANSFER_RATE = 100;
+    private static final int BASE_FE_PER_TICK = 40;
 
-    // Fields
-    private final int baseFePerTick;
-    private int currentEnergy = 0;
-    private int transferRate = 0;
+    // Block energy multipliers for thermal energy generation
+    private static final Map<Block, Float> FE_MULTIPLIERS = new HashMap<>(Map.of(
+            Blocks.LAVA, 20.0f,             // Lava block energy multiplier
+            Blocks.COAL_BLOCK, 1.5f         // Coal block energy multiplier
+    ));
 
-    public BasicThermoGeneratorBE(BlockEntityType<?> type, BlockPos pos, BlockState state, int baseFePerTick) {
-        super(type, pos, state);
-        this.baseFePerTick = baseFePerTick;
+    // Energy Storage
+    private final EnergyStorage energyStorage;
+
+    public BasicThermoGeneratorBE(BlockPos pos, BlockState blockState) {
+        super(ModBlockEntities.BASICTHERMOGENERATOR_BE.get(), pos, blockState);
+        this.energyStorage = new EnergyStorage(MAX_ENERGY_CAPACITY, MAX_TRANSFER_RATE); // Ensure correct parameters
     }
 
-    public int calculateAndGenerateEnergy() {
-        int energyMultiplier = calculateEnergyMultiplier();
-        int energyGenerated = baseFePerTick * energyMultiplier;
-        addEnergySafely(energyGenerated);
-        transferRate = energyGenerated; // Update transfer rate to match generated energy
-        return energyGenerated;
-    }
-
-    private int calculateEnergyMultiplier() {
-        if (isSpecificBlockUnderneath(LAVA_BLOCK)) {
-            return (int) LAVA_MULTIPLIER;
-        } else if (isSpecificBlockUnderneath(COAL_BLOCK)) {
-            return (int) COAL_MULTIPLIER;
-        } else {
-            return 1;
+    /**
+     * Gets the energy multiplier based on the block below.
+     *
+     * @return the energy multiplier or BASE_FE_PER_TICK if no valid block is below.
+     */
+    public int getMultiplier() {
+        // Ensure level and position validity
+        if (level == null || worldPosition == null || worldPosition.getY() <= 0) {
+            return BASE_FE_PER_TICK;
         }
+
+        // Get block state below this generator
+        BlockState blockBelow = level.getBlockState(worldPosition.below());
+
+        // Default to BASE_FE_PER_TICK if no specific multiplier is found
+        float multiplier = FE_MULTIPLIERS.getOrDefault(blockBelow.getBlock(), (float) BASE_FE_PER_TICK);
+
+        return Math.round(multiplier); // Round off and return as int
     }
 
-    public int getCurrentEnergy() {
-        return currentEnergy;
+    // Getter for the current energy stored
+    public int getEnergyStored() {
+        return energyStorage.getEnergyStored();
     }
 
-    public void addEnergySafely(int energy) {
-        currentEnergy = Math.min(currentEnergy + energy, MAX_ENERGY_CAPACITY);
+    // Getter for the maximum energy capacity
+    public int getMaxEnergyCapacity() {
+        return energyStorage.getMaxEnergyStored();
     }
 
-    private boolean isSpecificBlockUnderneath(Block block) {
-        if (level == null) return false; // Ensure the level (world) is loaded
-        Block blockBelow = level.getBlockState(worldPosition.below()).getBlock();
-        return blockBelow == block;
-    }
-
-    public int getTransferRate() {
-        return transferRate;
-    }
-
-    public boolean isFull() {
-        return currentEnergy >= MAX_ENERGY_CAPACITY;
-    }
-
-    public boolean isEmpty() {
-        return currentEnergy <= 0;
-    }
-
-    public void setEnergy(int energy) {
-        currentEnergy = energy;
-    }
-
-    public void setTransferRate(int transferRate) {
-        this.transferRate = transferRate;
-    }
-
-    public boolean keepEnergy() {
-        return true; // Fixed: Ensuring this returns boolean as expected
-    }
-
-    public boolean keepFluid() {
-        return true;
-    }
-
-    public int getSlotLimit(int slot) {
-        return 1;
-    }
-
-    public boolean canExtract(int slot, ItemStack stack) {
-        return true;
-    }
     @Override
-    public EnergyStorage getEnergyStorage() {
-        return this.energyStorage;
+    public int outputEnergy() {
+        return 0;
+    }
+
+    @Override
+    public int maxEnergyCapacity() {
+        return 0;
+    }
+
+    @Override
+    public int currentEnergy() {
+        return 0;
+    }
+
+    @Override
+    public boolean hasEnergy() {
+        return false;
+    }
+
+    @Override
+    public boolean isOverloaded() {
+        return false;
+    }
+
+    @Override
+    public void consumeFuel(int amount) {
+
     }
 }
